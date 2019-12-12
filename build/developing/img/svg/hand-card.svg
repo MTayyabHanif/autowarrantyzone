@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="hand-card" width="45.997" height="33" viewBox="0 0 45.997 33">
+    <defs>
+        <style>
+            .cls-1{fill:#f3c7a8}.cls-2{fill:#444}.cls-3{fill:#43a6dd}.cls-4{fill:#223e49}.cls-5{opacity:.1}.cls-6{fill:#fff}
+        </style>
+    </defs>
+    <path id="Path_103" d="M46.074 23.565L26.078 22a1.013 1.013 0 0 0-.484.083l-18 8a1 1 0 0 0-.542 1.23l.879 2.639a6.7 6.7 0 0 0 5.484 4.507A176.255 176.255 0 0 0 32 40a14.783 14.783 0 0 0 10.6-4.359A15.391 15.391 0 0 0 47 24.553a1 1 0 0 0-.926-.988z" class="cls-1" data-name="Path 103" transform="translate(-1 -7)"/>
+    <path id="Path_104" d="M24 19H2a1 1 0 0 1 0-2h22a1 1 0 0 1 0 2z" class="cls-2" data-name="Path 104" transform="translate(-1 -7)"/>
+    <path id="Path_105" d="M18.085 14H2a1 1 0 0 1 0-2h16.085a1 1 0 0 1 0 2z" class="cls-2" data-name="Path 105" transform="translate(-1 -7)"/>
+    <path id="Path_106" d="M31 7H3a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" class="cls-3" data-name="Path 106" transform="translate(-1 -7)"/>
+    <path id="Rectangle_88" d="M0 0h31v5H0z" class="cls-4" data-name="Rectangle 88" transform="translate(0 5)"/>
+    <path id="Path_107" d="M33 12.05c-.332-.022-.663-.05-1-.05H18a1 1 0 0 0-1 1 6.006 6.006 0 0 0 6 6h3c.382 3.45 3.743 6.967 7 8.365z" class="cls-5" data-name="Path 107" transform="translate(-1 -7)"/>
+    <path id="Path_108" d="M32 10H18a1 1 0 0 0-1 1 6.006 6.006 0 0 0 6 6h4.056c.491 4.436 4.154 9 8.944 9h.044l10-.438a1 1 0 0 0 .956-1.01A14.9 14.9 0 0 0 32 10z" class="cls-1" data-name="Path 108" transform="translate(-1 -7)"/>
+    <path id="Rectangle_89" d="M0 0h14v3H0z" class="cls-6" data-name="Rectangle 89" transform="translate(4 14)"/>
+</svg>

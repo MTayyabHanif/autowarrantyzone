@@ -1,0 +1,31 @@
+// Font based variables
+//
+// Styleguide
+
+
+//
+//
+// BASE FONT
+//
+//
+
+/* @import must be at top of file, otherwise CSS will not work */
+
+
+$base-font:   'Rubik', 'Helvetica Neue', 'Avenir Next', 'Segoe UI', 'Verdana', sans-serif !default;
+$heading:   "Montserrat", 'Helvetica Neue', 'Avenir Next', 'Segoe UI', 'Verdana', sans-serif !default;
+$monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace !default;
+$body:    $base-font !default;
+$body-weight:    400 !default;
+$monospace:       $monospace-font !default;
+
+$font-size: 1.16rem !default;
+$line-height: 1.655rem !default;
+
+$font-size--huge: 1.58rem !default;
+$font-size--large: 1.449rem !default;
+$font-size--medium: $font-size !default;
+$font-size--small: 1.0111rem !default;
+$font-size-smaller: 1rem !default;
+$font-size--tiny: 0.89rem !default;
+

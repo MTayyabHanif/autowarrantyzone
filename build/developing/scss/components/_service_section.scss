@@ -1,0 +1,112 @@
+.services-section{
+    > .container > .row.with-gutter > .col-md-6:last-child{
+        margin-top: 56px;
+    }
+    .services-section--title {
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: #2d5792;
+        max-width: 855px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 96px;
+    }
+    .services-section--subtitle {
+        max-width: 855px;
+        width: 100%;
+        margin: 0 auto;
+        letter-spacing: normal;
+        color: #3c8c68;
+        margin-top: 12px;
+    }
+    .services-section--img img {
+        width: 55%;
+        height: 17%;
+        object-fit: contain;
+        position: absolute;
+        left: -106px;
+        margin-top: -99px;
+        @media screen and (max-width: 768px){
+            width: 100%;
+            height: 50%;
+            left: auto;
+            right: -38%;
+            margin: 0;
+            top: 70%;
+            transform: translateY(-70%) rotateY(180deg);
+        }
+        @media screen and (max-width: 450px){
+            right: -45%;
+            top: 72%;
+        }
+        @media screen and (max-width: 424px){
+            right: -42%;
+            top: 73%;
+            width: 368px;
+        }
+        @media screen and (max-width: 370px){
+            top: 770px;
+            width: 315px;
+            height: 220px;
+        }
+        @media screen and (max-width: 361px){
+            top: 812px;
+            width: 287px;
+            height: 204px;
+            right: -38%;
+        }
+        @media screen and (max-width: 345px){
+            top: 833px;
+            width: 260px;
+            height: 177px;
+        }
+        @media screen and (max-width: 321px){
+            top: 874px;
+            width: 250px;
+            height: 165px;
+        }
+    }
+    .service-section--content {
+        max-width: 590px;
+        margin-left: auto;
+        margin-top: 30px;
+        @media screen and (max-width: 768px){
+            margin-left: 0;
+            padding: 0 13px;
+        }
+    }
+    .service-covered {
+        display: flex;
+        margin-bottom: 6px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        img.service-covered--img {
+            width: 21px;
+            height: 21px;
+            object-fit: contain;
+        }
+        .service-covered--name {
+            margin-left: 12px;
+            span {
+                color: #4f4f57;
+                font-size: 18px;
+                line-height: 1.5;
+            }
+        }
+    }
+    .services-title {
+        font-weight: bold;
+        color: #4f4f57;
+        margin-top: 44px;
+    }
+    @media screen and (max-width: 768px){
+        position: relative;
+        overflow: hidden;
+        .services-section--subtitle {
+            font-size: 21px;
+            line-height: 24px;
+        }
+    }
+}

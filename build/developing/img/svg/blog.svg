@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="46" viewBox="0 0 38 46">
+    <defs>
+        <style>
+            .cls-1{fill:#eff1f5}.cls-2{fill:#528ad9}.cls-3{fill:#b3b3b3}
+        </style>
+    </defs>
+    <g id="blog" transform="translate(-5 -1)">
+        <rect id="Rectangle_86" width="38" height="46" class="cls-1" data-name="Rectangle 86" rx="2" transform="translate(5 1)"/>
+        <rect id="Rectangle_87" width="26" height="13" class="cls-2" data-name="Rectangle 87" rx="1" transform="translate(11 7)"/>
+        <path id="Path_100" d="M36 27H12a1 1 0 0 1 0-2h24a1 1 0 0 1 0 2z" class="cls-3" data-name="Path 100"/>
+        <path id="Path_101" d="M36 34H12a1 1 0 0 1 0-2h24a1 1 0 0 1 0 2z" class="cls-3" data-name="Path 101"/>
+        <path id="Path_102" d="M23 41H12a1 1 0 0 1 0-2h11a1 1 0 0 1 0 2z" class="cls-3" data-name="Path 102"/>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80.58" height="85" viewBox="0 0 80.58 85">
+    <defs>
+        <style>
+            .cls-1{fill:#3e4b51}.cls-2{fill:#eff1f5}.cls-3{fill:#528ad9}.cls-4{fill:#b3b3b3}
+        </style>
+    </defs>
+    <g id="easy_claims" data-name="easy claims" transform="translate(-549 -1140)">
+        <g id="shield" transform="translate(549 1140)">
+            <path id="shield-2" d="M79.363 15.721L40.683.039a1.988 1.988 0 0 0-.785 0l-38.68 15.7A1.394 1.394 0 0 0 0 17v30.073C0 65.13 34.624 85 40.29 85c5.6 0 40.29-19.87 40.29-37.927V17a1.419 1.419 0 0 0-1.217-1.279z" class="cls-1" data-name="shield"/>
+        </g>
+        <g id="blog" transform="translate(565 1155)">
+            <rect id="Rectangle_86" width="38" height="46" class="cls-2" data-name="Rectangle 86" rx="2" transform="translate(5 1)"/>
+            <rect id="Rectangle_87" width="26" height="13" class="cls-3" data-name="Rectangle 87" rx="1" transform="translate(11 7)"/>
+            <path id="Path_100" d="M36 27H12a1 1 0 0 1 0-2h24a1 1 0 0 1 0 2z" class="cls-4" data-name="Path 100"/>
+            <path id="Path_101" d="M36 34H12a1 1 0 0 1 0-2h24a1 1 0 0 1 0 2z" class="cls-4" data-name="Path 101"/>
+            <path id="Path_102" d="M23 41H12a1 1 0 0 1 0-2h11a1 1 0 0 1 0 2z" class="cls-4" data-name="Path 102"/>
+        </g>
+    </g>
+</svg>

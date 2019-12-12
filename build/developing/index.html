@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <!-- Set the title of your site here -->
+        <title>Auto Warranty Zone</title>
+
+        <meta name="author" content="Author">
+        <meta name="description" content="description">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Link to your stylesheet here -->
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!-- Favicons and Touch Device Icons -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon" href="touch-icon-iphone-precomposed.png">
+        <link rel="apple-touch-icon" sizes="72x72"   href="touch-icon-ipad-precomposed.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-retina-precomposed.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina-precomposed.png">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800|Rubik:400,700&display=swap" rel="stylesheet"> 
+
+        <!--[if lt IE 9]>
+       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+       <![endif]-->
+    </head>
+
+    <body>
+        
+
+        <nav class="row navbar middle-xs between-xs">
+            <a href="http://localhost:3000" class="navbar--logo">
+                <img src="img/logoDesktop.png" 
+                srcset="img/logDesktop@2x.png 2x, img/logoDesktop@3x.png 3x">
+            </a>
+            <a href="tel:1-800-12347" class="navbar--phone">
+                <img src="img/svg/phoneIcon.svg" class="phoneIcon">
+                <span class="text-18">
+                    Call fro a Free Quote<br>
+                    <span class="number text-25">1-800-12347</span>
+                </span>
+            </a>
+        </nav>
+        <header class="header">
+            <div class="container">
+                <h1 class="text-57 bold m-0 pb-0">A <span>Stress Free</span> Approach<br>
+                    to Auto Repair coverage</h1>
+                <div class="header-content">
+                    <img src="img/car-white.png"
+                        srcset="img/car-white@2x.png 2x,
+                                img/car-white@3x.png 3x"
+                        class="header-content--img">
+                    <img src="img/arrowWhite.png"
+                        srcset="img/arrowWhite@2x.png 2x,
+                                img/arrowWhite@3x.png 3x"
+                        class="header-content--arrow">
+                </div>
+                <div class="quote-form">
+                    <div class="quote-form--wrapper">
+                        <form id="quoteForm" class="p-0 mb-0">
+                            <div class="row with-gutter">
+                                <div class="col-xs-12 col-md-12">
+                                    <div class="info-note form-error error" data-component="info-note"><span class="close small"></span></div>
+                                    <div class="info-note form-success success" data-component="info-note"><span class="close small"></span></div>
+                                </div>
+                                <div class="col-xs-12 col-md-12">
+                                    <div class="form-item form-item-year p-0 mb-0 mt-0">
+                                        <label class="text-uppercase">Year <span>*</span></label>
+                                        <select data-placeholder="Select Year" name="car_year" class="quote-form--year chosen-select text-18">
+                                        </select>
+                                        <div class="desc">Year value is required!</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-12">
+                                    <div class="form-item form-item-make non-selectable p-0 mb-0" data-tooltip="Please select Year first">
+                                        <label class="text-uppercase text-18">Make <span>*</span></label>
+                                        <select data-placeholder="Select Make" name="car_make" class="quote-form--make chosen-select text-18" disabled>
+                                        </select>
+                                        <div class="desc">Make value is required!</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-item form-item-model non-selectable p-0 mb-0" data-tooltip="Please select Make first">
+                                        <label class="text-uppercase">Model <span>*</span></label>
+                                        <select data-placeholder="Select Model" name="car_model" class="quote-form--model chosen-select text-18" disabled>
+                                        </select>
+                                        <div class="desc">Model value is required!</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-item form-item-milage p-0 mb-0">
+                                        <label class="text-uppercase">Milage <span>*</span></label>
+                                        <input type="text" name="mileage" class="quote-form--milage text-18" />
+                                        <div class="desc">Milage value is required!</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-6">
+                                    <div class="form-item form-item-firstName p-0 mb-0">
+                                        <label class="text-uppercase">First Name <span>*</span></label>
+                                        <input type="text" name="first_name" class="quote-form--firstName text-18" />
+                                        <div class="desc">First Name is required!</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-6">
+                                    <div class="form-item form-item-lastName p-0 mb-0">
+                                        <label class="text-uppercase">Last Name <span>*</span></label>
+                                        <input type="text" name="last_name" class="quote-form--lastName text-18" />
+                                        <div class="desc">Last Name is required!</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-12">
+                                    <div class="form-item form-item-email p-0 mb-0">
+                                        <label class="text-uppercase">Email <span>*</span></label>
+                                        <input type="text" name="email1" class="quote-form--email text-18" />
+                                        <div class="desc">Email is required!</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-item form-item-phone p-0 mb-0">
+                                        <label class="text-uppercase">Phone <span>*</span></label>
+                                        <input type="text" name="phone_1" class="quote-form--phone text-18" />
+                                        <div class="desc">Phone is required!</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-7 col-md-6">
+                                    <div class="form-item form-item-zip p-0 mb-0">
+                                        <label class="text-uppercase">Zip <span>*</span></label>
+                                        <input type="text" name="primary_address_postalcode" class="quote-form--zip text-18" />
+                                        <div class="desc">Zip is required!</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-12">
+                                    <div class="form-item p-0 mb-0 mt-0">
+                                        <button type="submit" class="button text-21 light text-uppercase">Get a <span class="bold">Free Quote Now</span></button>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-12">
+                                    <p class="text-14">
+                                        "By Clicking the above button and providing your electronic signature, 
+                                        you consent to receive telephone calls, text messages and emails from one 
+                                        of our partners at the number or email provided, which may include the use 
+                                        of automatic telephone dialing system and that consent is not a condition 
+                                        of purchase."
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="benefits_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-7">
+                            <div class="row with-gutter">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="benefit-item">
+                                        <img src="img/svg/affordable-monthly.svg"
+                                            class="service-item--img">
+                                        <h5 class="title text-18">Affordable Monthly Payments</h5>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="benefit-item">
+                                        <img src="img/svg/avoid-cost.svg"
+                                            class="benefit-item--img">
+                                        <h5 class="title text-18">Avoid the potential cost of expensive repairs</h5>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="benefit-item">
+                                        <img src="img/svg/pay-as-you-go.svg"
+                                            class="benefit-item--img">
+                                        <h5 class="title text-18">Pay as you go coverage</h5>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="benefit-item">
+                                        <img src="img/svg/easy-claims.svg"
+                                            class="benefit-item--img">
+                                        <h5 class="title text-18">Easy Claims Process</h5>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="benefit-item">
+                                        <img src="img/svg/trusted-shop.svg"
+                                            class="benefit-item--img">
+                                        <h5 class="title text-18">Use Your Trusted Licensed Repair Shop</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="work_section">
+                <div class="container">
+                    <div class="work_section--content">
+                        <h2 class="text-43 bold m-0">How does an Auto Warranty Work?</h2>
+                        <div class="working-points">
+                            <div class="working-point">
+                                <img src="img/svg/tick.svg" class="working-point--img">
+                                <div>
+                                    <p class="text-18">
+                                        <span>Get a Customized Coverage Plan</span> – 
+                                        Select a plan that best fits your needs. Start by getting a free, 
+                                        no-obligation quote.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="working-points">
+                            <div class="working-point">
+                                <img src="img/svg/tick.svg" class="working-point--img">
+                                <div>
+                                    <p class="text-18">
+                                        <span>Choose Your Repair Facility</span> – 
+                                        Extended Auto Warranties can be used at licensed repair facilities throughout the United States. These repair facilities include independent facilities, nationwide chains (Example: Goodyear, Pep Boys, Firestone, etc.) or even dealers.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="working-points">
+                            <div class="working-point">
+                                <img src="img/svg/tick.svg" class="working-point--img">
+                                <div>
+                                    <p class="text-18">
+                                        <span>Repair Facility Submits Claim on Your Behalf</span> – 
+                                        Once the facility has diagnosed the vehicle before making a claim, they will submit the information to the vehicle service contract’s claims department for approval.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="working-points">
+                            <div class="working-point">
+                                <img src="img/svg/tick.svg" class="working-point--img">
+                                <div>
+                                    <p class="text-18">
+                                        <span>Claims department pays the repair department directly</span> – 
+                                        When your repair is complete, the payment will be made by the vehicle service contract directly to the repair facility.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work_section--images">
+                        <div class="work_section--car-img">
+                            <img src="img/redCar.png"
+                                srcset="img/redCar@2x.png 2x,
+                                        img/redCar@3x.png 3x" />
+                        </div>
+                        <div class="work_section--hassle-free-img">
+                            <img src="img/hasslefree.png"
+                                srcset="img/hasslefree@2x.png 2x,
+                                        img/hasslefree@3x.png 3x" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="services-section">
+                <div class="container">
+                    <h1 class="services-section--title text-43 bold">
+                        Save Thousands on the Thousands of Parts That Can Break
+                    </h1>
+                    <h5 class="services-section--subtitle text-24 bold">We have got you covered</h5>
+                    <div class="row with-gutter">
+                        <div class="services-section--img">
+                            <img src="img/carPartsImage.png"
+                                srcset="img/carPartsImage@2x.png 2x,
+                                        img/carPartsImage@3x.png 3x" />
+                        </div>
+                        <div class="service-section--content">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Engine</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Transmission</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Electrical Components</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Cooling System</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Front/Rear Suspension</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Air Conditioner</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Steering</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Transfer Units</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Seals and Gaskets</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Mirrors</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Fuel System</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Drive Axle</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">TurboCharger</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">And more...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12">
+                                    <h4 class="services-title text-24 bold">Additional Services Covered</h4>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Roadside Assistance</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Rental Car</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Transfer to new owner</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Lost key/Lockout Assistance</span>
+                                        </div>
+                                    </div>
+                                    <div class="service-covered">
+                                        <img src="img/svg/c-check.svg"
+                                            class="service-covered--img m-0">
+                                        <div class="service-covered--name">
+                                            <span class="m-0">Unlimited number of Claims</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-links">
+                    <a href="about-us.html">About Us</a>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-info">
+                    <p>
+                        Our Company uses the terms ‘Warranty’ and ‘Extended Warranty’ with ‘Vehicle Service 
+                        Contract’ and ‘Extended Service Contract’ for marketing purposes only. * A Vehicle 
+                        Service Contract (VSC) is often referred to as an "auto warranty" or an "extended 
+                        car warranty," but it is not a warranty. A VSC does, however, provide repair coverage
+                        for your vehicle after the manufacturer’s car warranty expires. A VSC is a contract
+                        between you and a VSC provider or administrator that states what a covered repair 
+                        is and what is not.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="js/scripts/jquery.js"></script>
+        <script src="js/scripts.min.js"></script>
+        <script type="text/javascript" src="http://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
+    </body>
+</html>

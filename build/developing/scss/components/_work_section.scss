@@ -1,0 +1,159 @@
+.work_section{
+    position: relative;
+    margin-top: 92px;
+    h2{
+        color: #2d5792;
+        @media screen and (max-width: 768px){
+            max-width: 75%;
+        }
+        @media screen and (max-width: 440px){
+            max-width: 80%;
+        }
+    }
+    .work_section--content {
+        max-width: 500px;
+        @media screen and (max-width: 768px){
+            max-width: 100%;
+        }
+    }
+    .working-point {
+        display: flex;
+        margin-top: 49px;
+        &:first-child{
+            margin-top: 56px;
+        }
+        img {
+            width: 21px;
+            height: 21px;
+            object-fit: contain;
+            margin: 0;
+        }
+        p {
+            color: #4f4f57;
+            font-weight: 500;
+            margin-top: -2px;
+            margin-left: 12px;
+        }
+        p span {
+            font-weight: 700;
+            font-family: $heading;
+        }
+    }
+    .work_section--car-img img {
+        width: 920px;
+        height: 755px;
+        object-fit: contain;
+        position: absolute;
+        top: -370px;
+        right: 6%;
+        z-index: -1;
+        
+        @media screen and (max-width: 1660px){
+            right: 2%;
+        }
+        @media screen and (max-width: 1540px){
+            right: -2%;
+        }
+        @media screen and (max-width: 1440px){
+            width: 899px;
+        }
+        @media screen and (max-width: 1320px){
+            width: 780px;
+        }
+        @media screen and (max-width: 1280px){
+            top: -510px
+        }
+        @media screen and (max-width: 1180px){
+            width: 710px;
+        }
+        @media screen and (max-width: 1054px){
+            width: 650px;
+        }
+        @media screen and (max-width: 1000px){
+            width: 600px;
+        }
+        @media screen and (max-width: 768px){
+            right: -350px;
+            top: -470px;
+        }
+        @media screen and (max-width: 570px){
+            right: -320px;
+        }
+        @media screen and (max-width: 520px){
+            right: -247px;
+        }
+        @media screen and (max-width: 459px){
+            right: -223px;
+        }
+        @media screen and (max-width: 459px){
+            right: -260px;
+            top: -418px;
+        }
+        @media screen and (max-width: 400px){
+            right: -225px;
+        }
+        @media screen and (max-width: 387px){
+            right: -186px;
+        }
+    }
+    .work_section--hassle-free-img img {
+        position: absolute;
+        top: 53%;
+        right: 22%;
+        z-index: -1;
+        @media screen and (max-width: 1050px){
+            width: 280px;
+        }
+        @media screen and (max-width: 768px){
+            top: auto;
+            bottom: -85%;
+            right: 17%;
+            width: 117px;
+            height: 117px;
+            object-fit: contain;
+        }
+        @media screen and (max-width: 560px){
+            bottom: -494px;
+        }
+        @media screen and (max-width: 489px){
+            bottom: -531px;
+            right: 49px;
+        }
+        @media screen and (max-width: 424px){
+            bottom: -569px;
+            right: 15px;
+            width: 100px;
+            height: 100px;
+        }
+        @media screen and (max-width: 370px){
+            bottom: -565px;
+            right: 7px;
+            width: 70px;
+            height: 70px;
+        }
+        @media screen and (max-width: 361px){
+            bottom: -607px;
+        }
+        @media screen and (max-width: 345px){
+            bottom: -631px;
+        }
+        @media screen and (max-width: 321px){
+            bottom: -671px;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    @media screen and (max-width: 768px){
+        .working-point {
+            margin-top: 32px;
+            &:first-child{
+                margin-top: 40px;
+            }
+            p {
+                margin-top: 0;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}

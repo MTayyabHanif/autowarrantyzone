@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80.58" height="85" viewBox="0 0 80.58 85">
+    <defs>
+        <style>
+            .cls-1{fill:#3e4b51}.cls-2{fill:#59d8d8}.cls-3{fill:#51cdcd}.cls-4{fill:#9bced3}.cls-5{fill:#bfdee0}
+        </style>
+    </defs>
+    <g id="trusted_shop" data-name="trusted shop" transform="translate(-204 -1322)">
+        <g id="Group_156" data-name="Group 156" transform="translate(204 1322)">
+            <path id="shield" d="M79.363 15.721L40.683.039a1.988 1.988 0 0 0-.785 0l-38.68 15.7A1.394 1.394 0 0 0 0 17v30.073C0 65.13 34.624 85 40.29 85c5.6 0 40.29-19.87 40.29-37.927V17a1.419 1.419 0 0 0-1.217-1.279z" class="cls-1"/>
+        </g>
+        <g id="privacy-policy" transform="translate(220 1338)">
+            <circle id="Ellipse_15" cx="5" cy="5" r="5" class="cls-2" data-name="Ellipse 15" transform="translate(5 5)"/>
+            <path id="Path_109" d="M22.665 27.114c-2.384-.841-3.833-2.64-5.367-4.546C15.2 19.958 12.813 17 8 17a7.009 7.009 0 0 0-7 7v18a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V26.077a14.317 14.317 0 0 0 6.335 4.809 2 2 0 1 0 1.33-3.772z" class="cls-3" data-name="Path 109"/>
+            <path id="Path_110" d="M25.335 27.114c2.384-.841 3.833-2.64 5.367-4.546C32.805 19.958 35.187 17 40 17a7.009 7.009 0 0 1 7 7v18a1 1 0 0 1-1 1H34a1 1 0 0 1-1-1V26.077a14.317 14.317 0 0 1-6.335 4.809 2 2 0 1 1-1.33-3.772z" class="cls-4" data-name="Path 110"/>
+            <circle id="Ellipse_16" cx="5" cy="5" r="5" class="cls-5" data-name="Ellipse 16" transform="translate(33 5)"/>
+        </g>
+    </g>
+</svg>

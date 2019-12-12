@@ -1,0 +1,29 @@
+{
+  "name": "html-starter",
+  "version": "2.0.0",
+  "description": "A repository for starting an HTML CSS Template that includes SCSS, Image minifier, JS uglify, CSS cleaner/minifier and much more!",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.1.1",
+    "browser-sync": "^2.18.11",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.7",
+    "gulp-webserver": "^0.9.1",
+    "rtlcss": "^2.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tayyab",
+  "license": "MIT"
+}

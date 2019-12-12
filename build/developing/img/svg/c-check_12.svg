@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="c-check" width="23" height="23" viewBox="0 0 23 23">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#3c8c68;stroke-linecap:square;stroke-miterlimit:10;stroke-width:2px}
+        </style>
+    </defs>
+    <path id="Path_2" d="M9 15.375l2.917 2.917L19.208 11" class="cls-1" data-name="Path 2" transform="translate(-2.604 -3.146)"/>
+    <circle id="Ellipse_1" cx="10.5" cy="10.5" r="10.5" class="cls-1" data-name="Ellipse 1" transform="translate(1 1)"/>
+</svg>
