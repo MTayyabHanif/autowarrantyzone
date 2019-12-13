@@ -2568,7 +2568,7 @@ input[type="date"], focus {
  * HEADER
 ******************/
 .header {
-  background-image: url("../../img/headerBg.png");
+  background-image: url("../img/headerBg.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
