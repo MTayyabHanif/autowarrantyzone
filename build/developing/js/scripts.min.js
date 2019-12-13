@@ -18,12 +18,13 @@ function sendFormMessage() {
         var emailValue = $(".quote-form--email").val();
         var phoneValue = $(".quote-form--phone").val();
         var zipValue = $(".quote-form--zip").val();
-        var ajaxUrl = "https://lafires.com/d.ashx";
-        // console.log($('#quoteForm').serialize());
+        var ajaxUrl = "https://lafires.com/d.ashx?ckm_campaign_id=14&ckm_key=GyDWoqNdMlM&";
+        console.log(ajaxUrl);
         jQuery.ajax({
-            url: ""+ajaxUrl+"",
-            data: $('#quoteForm').serialize() + 'ckm_campaign_id=14&ckm_key=GyDWoqNdMlM',
+            url: ajaxUrl,
+            data: $('#quoteForm').serialize(),
             type: "POST",
+            contentType: 'application/xml',
             success: function(data) {
                 // $('.form-success').show();
                 // $(".form-success").html(data);

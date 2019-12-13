@@ -2700,7 +2700,7 @@ input[type="date"], focus {
   .header.terms-header, .header.about-header {
     max-height: 157px;
     height: 100vh;
-    max-width: 1440px; }
+    max-width: 100%; }
     .header.terms-header h1, .header.about-header h1 {
       font-size: 43px;
       line-height: 48px;
