@@ -215,3 +215,25 @@ $('body').on('change', '.form-item-make .quote-form--make', function(){
     });
 
 });
+
+$('input[type=number]').on('keypress', function(e){
+    var x=e.which||e.keycode;
+    if((x>=48 && x<=57) || x==8 ||
+        (x>=35 && x<=40)|| x==46)
+        return true;
+    else
+        return false;
+});
+
+$('#quoteForm input').on('keypress', function(e){
+    var maxLength = parseInt($(this).attr('maxlength'));
+    var curentValLength = $(this).val().length;
+    curentValLength = curentValLength+1;
+    
+    
+    if($(this).val().length >= maxLength){
+        return false;
+    } else {
+        return true;
+    }
+});
