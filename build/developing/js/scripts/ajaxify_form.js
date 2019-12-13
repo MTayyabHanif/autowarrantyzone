@@ -6,9 +6,10 @@ $("#quoteForm").submit(function(event) {
 function sendFormMessage() {
     var valid;
     valid = validateQuoteForm();
-    $('.form-success').hide();
-    $('.form-error').hide();
+    $('.form-errors').empty();
+    $('.form-errors').hide();
     if (valid === true) {
+        $('.quote-form button').addClass('disabled');
         var yearValue = $(".quote-form--year").val();
         var makeValue = $(".quote-form--make").val();
         var modelValue = $(".quote-form--model").val();
@@ -18,20 +19,36 @@ function sendFormMessage() {
         var emailValue = $(".quote-form--email").val();
         var phoneValue = $(".quote-form--phone").val();
         var zipValue = $(".quote-form--zip").val();
-        var ajaxUrl = "https://lafires.com/d.ashx?ckm_campaign_id=14&ckm_key=GyDWoqNdMlM&";
+        var errors = "";
+        var ajaxUrl = "https://lafires.com/d.ashx?ckm_campaign_id=14&ckm_key=GyDWoqNdMlM&ckm_test=1&"+$('#quoteForm').serialize()+"";
         console.log(ajaxUrl);
         jQuery.ajax({
             url: ajaxUrl,
-            data: $('#quoteForm').serialize(),
-            type: "POST",
-            contentType: 'application/xml',
+            type: "GET",
+            dataType: 'jsonp',
             success: function(data) {
                 // $('.form-success').show();
                 // $(".form-success").html(data);
                 console.log(data);
-                $('#quoteForm').trigger("reset");
+                if(data.success == true){
+                    location.href = "https://autowarrantyzone.com"
+                    return true;
+                }
+                if(data.errors){
+                    for(var i = 0; i < data.errors.length; i++){
+                        errors += "<span>"+data.errors[i]+"</span><br>"
+                    }
+                    $('.form-errors').append(errors);
+                    $('.form-errors').show();
+                    $('.quote-form button').removeClass('disabled');
+                    return true;
+                }
+                $('.form-errors').append('Something went wrong');
+                $('.form-errors').show();
+                $('.quote-form button').removeClass('disabled');
             },
-            error: function(data) {
+            error: function(err) {
+                console.log(err);
             }
         });
     } else {
@@ -48,43 +65,53 @@ function validateQuoteForm() {
     if (!$(".quote-form--year").val()) {
         $('.form-item-year .desc').show();
         $('.form-item-year').addClass('error');
+        valid = false;
     }
     if (!$(".quote-form--make").val()) {
         $('.form-item-make .desc').show();
         $('.form-item-make').addClass('error');
+        valid = false;
     }
     if (!$(".quote-form--model").val()) {
         $('.form-item-model .desc').show();
         $('.form-item-model').addClass('error');
+        valid = false;
     }
     if (!$(".quote-form--milage").val()) {
         $('.form-item-milage .desc').show();
         $('.quote-form--milage').addClass('error');
+        valid = false;
     }
     if (!$(".quote-form--firstName").val()) {
         $('.form-item-firstName .desc').show();
         $('.quote-form--firstName').addClass('error');
+        valid = false;
     }
     if (!$(".quote-form--lastName").val()) {
         $('.form-item-lastName .desc').show();
         $('.quote-form--lastName').addClass('error');
+        valid = false;
     }
     if (!$(".quote-form--email").val()) {
         $('.form-item-email .desc').show();
         $('.quote-form--email').addClass('error');
+        valid = false;
     }
     if (!$(".quote-form--email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
         $('.form-item-email .desc').text('Email is not valid');
         $('.form-item-email .desc').show();
         $('.quote-form--email').addClass('error');
+        valid = false;
     }
     if (!$(".quote-form--phone").val()) {
         $('.form-item-phone .desc').show();
         $('.quote-form--phone').addClass('error');
+        valid = false;
     }
     if (!$(".quote-form--zip").val()) {
         $('.form-item-zip .desc').show();
         $('.quote-form--zip').addClass('error');
+        valid = false;
     }
 
     if(valid === ""){
