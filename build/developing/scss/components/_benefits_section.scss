@@ -15,14 +15,18 @@
             font-weight: bold;
         }
     }
-    @media screen and (max-width: 760px){
-        .benefit-item {
-            text-align: center;
+    @media screen and (max-width: 840px){
+        .benefit-item{
             max-width: 273px;
-            margin: 0 auto 63px;
-            img{
+            text-align: center;
+            img {
                 margin: 0 auto;
             }
+        }
+    }
+    @media screen and (max-width: 760px){
+        .benefit-item {
+            margin: 0 auto 63px;
         }
     }
 }
