@@ -237,9 +237,12 @@
         }
     }
     &.terms-header,&.about-header{
-        max-height: 157px;
-        height: 100vh;
-        max-width: 100%;
+        min-height: auto;
+        .header_bg{
+            max-height: 157px;
+            height: 100vh;
+            max-width: 100%;
+        }
         h1{
             font-size: 43px;
             line-height: 48px;
