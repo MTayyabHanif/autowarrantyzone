@@ -160,9 +160,13 @@
             letter-spacing: 0.11px;
             color: #fefefe;
             margin-top: 30px;
+            padding: 0 10px;
             &:hover{
                 box-shadow: 0 3px 6px 0 rgba(50, 59, 55, 0.33);
                 background-color: #004646;
+            }
+            @media screen and (max-width: 310px){
+                font-size: .8rem;
             }
         }
         form p{
@@ -292,6 +296,7 @@
     @media screen and (max-width:344px){
         .quote-form{
             top: 10px;
+            margin-bottom: 56px;
             .quote-form--wrapper {
                 padding: 40px 15px;
             }

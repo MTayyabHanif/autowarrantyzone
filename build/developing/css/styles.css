@@ -2718,12 +2718,18 @@ input[type="date"], focus {
       color: #fff;
       letter-spacing: 0.11px;
       color: #fefefe;
-      margin-top: 30px; }
+      margin-top: 30px;
+      padding: 0 10px; }
       .header .quote-form .form-item .button:hover, .header .quote-form .form-item [type=button]:hover,
       .header .quote-form .form-item [type=submit]:hover,
       .header .quote-form .form-item button:hover {
         box-shadow: 0 3px 6px 0 rgba(50, 59, 55, 0.33);
         background-color: #004646; }
+      @media screen and (max-width: 310px) {
+        .header .quote-form .form-item .button, .header .quote-form .form-item [type=button],
+        .header .quote-form .form-item [type=submit],
+        .header .quote-form .form-item button {
+          font-size: .8rem; } }
     .header .quote-form form p {
       color: #797573;
       margin-top: 22px; }
@@ -2831,7 +2837,8 @@ input[type="date"], focus {
       font-size: 38px; } }
   @media screen and (max-width: 344px) {
     .header .quote-form {
-      top: 10px; }
+      top: 10px;
+      margin-bottom: 56px; }
       .header .quote-form .quote-form--wrapper {
         padding: 40px 15px; } }
 
