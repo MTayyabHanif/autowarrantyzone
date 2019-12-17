@@ -3204,13 +3204,15 @@ footer {
 .intro-section .container {
   max-width: 825px;
   margin: 0 auto; }
-.intro-section .intro-section--title {
+.intro-section .intro-section--title, .intro-section h1 {
   font-size: 24px;
   font-weight: bold;
   line-height: 27px;
   color: #2d5792;
   margin: 0;
   padding-top: 56px; }
+.intro-section h2, .intro-section h3, .intro-section h4, .intro-section h5, .intro-section h6 {
+  color: #2d5792; }
 .intro-section .intro-section--description {
   margin-top: 24px; }
   .intro-section .intro-section--description p, .intro-section .intro-section--description ul li {
