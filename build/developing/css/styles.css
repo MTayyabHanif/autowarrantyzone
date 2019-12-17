@@ -3222,7 +3222,8 @@ footer {
   .intro-section .intro-section--description p:last-child {
     margin-bottom: 0; }
   .intro-section .intro-section--description ul li {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    list-style: none; }
     .intro-section .intro-section--description ul li:before {
       content: '';
       width: 9px;
@@ -3231,7 +3232,10 @@ footer {
       display: inline-block;
       border-radius: 50%;
       margin-right: 11px;
-      margin-bottom: 4px; }
+      margin-bottom: 4px;
+      margin-left: -24px; }
+    .intro-section .intro-section--description ul li p {
+      display: inline; }
 
 /*****************
  * ABOUT SECTION

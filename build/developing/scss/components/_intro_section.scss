@@ -25,6 +25,7 @@
         }
         ul li{
             margin-bottom: 0;
+            list-style: none;
             &:before {
                 content: '';
                 width: 9px;
@@ -34,6 +35,10 @@
                 border-radius: 50%;
                 margin-right: 11px;
                 margin-bottom: 4px;
+                margin-left: -24px;
+            }
+            p{
+                display: inline;
             }
         }
     }
