@@ -237,3 +237,18 @@ $('#quoteForm input').on('keypress', function(e){
         return true;
     }
 });
+
+// $(document).on("input", ".numeric", function() {
+//     this.value = this.value.replace(/\D/g,'');
+// });
+
+$(function(){
+
+    $('.numeric').keypress(function(e) {
+      if(isNaN(this.value+""+String.fromCharCode(e.charCode))) return false;
+    })
+    .on("cut copy paste",function(e){
+      e.preventDefault();
+    });
+  
+});

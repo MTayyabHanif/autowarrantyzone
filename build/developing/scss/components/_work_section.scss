@@ -1,18 +1,24 @@
 .work_section{
     position: relative;
     margin-top: 92px;
+    @media screen and (max-width: 760px){
+        margin-top: 64px;
+    }
     h2{
         color: #2d5792;
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 760px){
             max-width: 75%;
         }
         @media screen and (max-width: 440px){
             max-width: 80%;
         }
+        @media screen and (max-width: 390px){
+            max-width: 70%;
+        }
     }
     .work_section--content {
         max-width: 500px;
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 760px){
             max-width: 100%;
         }
     }
@@ -101,8 +107,15 @@
         top: 53%;
         right: 22%;
         z-index: -1;
+        @media screen and (max-width:1100px){
+            max-width: 300px;
+        }
         @media screen and (max-width: 1050px){
             width: 280px;
+        }
+        @media screen and (max-width: 1000px){
+            width: 230px;
+            right: 12%;
         }
         @media screen and (max-width: 768px){
             top: auto;
@@ -143,7 +156,7 @@
             height: 60px;
         }
     }
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 760px){
         .working-point {
             margin-top: 32px;
             &:first-child{
