@@ -2,9 +2,6 @@
     margin-top: 74px;
     .benefit-item {
         margin-bottom: 63px;
-        &:last-child{
-            margin-bottom: 0;
-        }
         img {
             margin-left: 0;
             width: 80.6px;
@@ -23,9 +20,6 @@
             text-align: center;
             max-width: 273px;
             margin: 0 auto 63px;
-            &:last-child{
-                margin-bottom: 0;
-            }
             img{
                 margin: 0 auto;
             }
