@@ -66,7 +66,7 @@
                 margin-left: auto;
             }
             @media screen and (max-width: 440px){
-                margin-left: 38px;
+                margin-left: 29px;
             }
             @media screen and (max-width: 410px){
                 height: 210px;
@@ -102,6 +102,9 @@
             @media screen and (max-width: 786px){
                 left: 40%;
                 transform: translateX(-40%);
+            }
+            @media screen and (max-width: 770px){
+                top: 293px;
             }
             @media screen and (max-width: 760px){
                 display: none;
@@ -234,6 +237,9 @@
         @media screen and (max-width: 779px){
             right: 20px;
             max-width: 368px;
+        }
+        @media screen and (max-width: 770px){
+            top: 295px;
         }
     }
     &.terms-header,&.about-header{
