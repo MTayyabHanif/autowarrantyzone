@@ -2535,6 +2535,7 @@ input[type="date"], focus {
       padding: 17px 22px; } }
   .navbar .navbar--logo img {
     max-width: 280px;
+    width: 100%;
     object-fit: contain; }
     @media screen and (max-width: 786px) {
       .navbar .navbar--logo img {
@@ -2853,10 +2854,6 @@ input[type="date"], focus {
         margin: 0 auto;
         top: -102px;
         z-index: 1; } }
-    @media screen and (max-width: 779px) {
-      .header .quote-form {
-        right: 20px;
-        max-width: 368px; } }
   .header.terms-header, .header.about-header {
     min-height: auto; }
     .header.terms-header .header_bg, .header.about-header .header_bg {

@@ -283,10 +283,6 @@
             top: -102px;
             z-index: 1;
         }
-        @media screen and (max-width: 779px){
-            right: 20px;
-            max-width: 368px;
-        }
     }
     &.terms-header,&.about-header{
         min-height: auto;
