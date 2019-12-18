@@ -2560,8 +2560,7 @@ input[type="date"], focus {
         border-radius: 4px;
         border: solid 1px #65707e;
         align-items: center;
-        justify-content: center;
-        margin-top: 16px; }
+        justify-content: center; }
         .navbar a.navbar--phone img {
           margin: 0;
           width: 36px; }
@@ -2876,20 +2875,21 @@ input[type="date"], focus {
         margin: 0 auto;
         top: -102px;
         z-index: 1; } }
-  .header.terms-header, .header.about-header {
-    min-height: auto; }
-    .header.terms-header .header_bg, .header.about-header .header_bg {
+  .header.page-header {
+    min-height: auto;
+    margin-bottom: 0; }
+    .header.page-header .header_bg {
       max-height: 157px;
       height: 100vh;
       max-width: 100%; }
-    .header.terms-header h1, .header.about-header h1 {
+    .header.page-header h1 {
       font-size: 43px;
       line-height: 48px;
       padding: 54px 0;
       text-align: left;
       margin: 0; }
   @media screen and (max-width: 506px) {
-    .header.terms-header h1 {
+    .header.page-header h1 {
       padding: 30px 0; } }
   @media screen and (max-width: 760px) {
     .header .header_bg {
@@ -3116,7 +3116,8 @@ footer {
         top: -418px; } }
     @media screen and (max-width: 400px) {
       .work_section .work_section--car-img img {
-        right: -225px; } }
+        right: -225px;
+        top: -330px; } }
     @media screen and (max-width: 387px) {
       .work_section .work_section--car-img img {
         right: -186px; } }
