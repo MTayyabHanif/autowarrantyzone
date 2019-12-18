@@ -309,24 +309,26 @@
         }
     }
     &.page-header{
-        min-height: auto;
+        min-height: 157px;
         margin-bottom: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
         .header_bg{
             max-height: 157px;
-            height: 100vh;
+            height: 100%;
             max-width: 100%;
         }
         h1{
             font-size: 43px;
             line-height: 48px;
-            padding: 54px 0;
             text-align: left;
             margin: 0;
+            padding:0;
         }
-    }
-    @media screen and (max-width: 506px){
-        &.page-header h1{
-            padding: 30px 0;
+        .container{
+            margin: 0 auto;
+            width: 100%;
         }
     }
     @media screen and (max-width: 760px){
@@ -342,6 +344,10 @@
             max-width: 400px;
             top: 60px;
             margin-bottom: 100px;
+        }
+        &.page-header .container{
+            max-width: 100%;
+            margin: 0;
         }
     }
     @media screen and (max-width:409px){
