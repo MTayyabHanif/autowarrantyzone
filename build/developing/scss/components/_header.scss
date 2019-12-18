@@ -163,13 +163,37 @@
             color: #4c5c63;
         }
         form select{
-            color: #afb1b4;
+            color: #afb1b4 !important;
             font-style: normal;
+            padding-left: 8px;
+            border-radius: 2px;
+            border: solid 1px #afb1b4;
         }
-        form select, form input{
+        form input{
             border-radius: 2px;
             border: solid 1px #afb1b4;
             color: #2d64b4;
+        }
+        .quote-form--milage {
+            padding-right: 46px;
+        }
+        .form-item-milage:after {
+            content: "KM";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #e0e1e2;
+            height: 46px;
+            padding: 0 10px;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            line-height: 48px;
+            color: rgba(0,0,0,0.6);
+            font-size: 16px;
+            border: 1px solid #afb1b4;
+            border-left: 0;
+            width: 24px;
+            text-align: center;
         }
         input::placeholder,
         input::-ms-input-placeholder,
