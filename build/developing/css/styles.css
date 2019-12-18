@@ -3233,32 +3233,27 @@ footer {
   @media screen and (max-width: 450px) {
     .services-section .services-section--img img {
       right: -45%;
-      top: 72%;
+      top: 66%;
       width: 100%; } }
   @media screen and (max-width: 424px) {
     .services-section .services-section--img img {
       right: -42%;
-      top: 73%;
       width: 368px; } }
   @media screen and (max-width: 370px) {
     .services-section .services-section--img img {
-      top: 770px;
       width: 315px;
       height: 220px; } }
   @media screen and (max-width: 361px) {
     .services-section .services-section--img img {
-      top: 812px;
       width: 287px;
       height: 204px;
       right: -38%; } }
   @media screen and (max-width: 345px) {
     .services-section .services-section--img img {
-      top: 833px;
       width: 260px;
       height: 177px; } }
   @media screen and (max-width: 321px) {
     .services-section .services-section--img img {
-      top: 874px;
       width: 250px;
       height: 165px; } }
 .services-section .service-section--content {
