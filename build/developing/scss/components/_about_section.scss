@@ -1,64 +1,52 @@
 .about-section{
     position: relative;
     overflow: hidden;
-    margin-top: 56px;
-    .about-content{
-        max-width: 760px;
-        width: 100%;
-        margin:  0 auto;
-        padding-bottom: 10rem;
+    padding-bottom: 10rem;
+    @media screen and (max-width: 991px){
+        padding-bottom: 0;
+    }
+    .about-section--info {
+        margin-top: 34px;
+    }
+    .about-section--info h4 {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 24px;
+        color: #4f4f57;
+        margin: 0;
+        margin-bottom: 17px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .about-section--info h4 a {
+        color: #1b509b;
+        text-decoration: none;
+        margin-left: 5px;
+        font-family: $base-font;
+    }
+    .about-section--info h4 span {
+        color: #53656d;
+        font-family: $base-font;
+    }
+    .about-section--img img {
+        max-width: 786px;
+        height: 440px;
+        object-fit: contain;
+        transform: scale(1.1);
+        margin-left: -36px;
+        margin-top: -70px;
+        position: absolute;
         @media screen and (max-width: 991px){
-            padding-bottom: 0;
+            position: relative;
+            margin-top: -50px;
+            transform: scale(1);
         }
-        .about-content--description {
-            font-size: 18px;
-            font-weight: normal;
-            line-height: 24px;
-            color: #4f4f57;
+        @media screen and (max-width:768px){
+            max-width: 600px;
         }
-        .about-content--info {
-            margin-top: 34px;
-        }
-        .about-content--info h4 {
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 24px;
-            color: #4f4f57;
-            margin: 0;
-            margin-bottom: 17px;
-            &:last-child{
-                margin-bottom: 0;
-            }
-        }
-        .about-content--info h4 a {
-            color: #1b509b;
-            text-decoration: none;
-            margin-left: 5px;
-            font-family: $base-font;
-        }
-        .about-content--info h4 span {
-            color: #53656d;
-            font-family: $base-font;
-        }
-        .about-content--img img {
-            max-width: 786px;
-            height: 440px;
-            object-fit: contain;
-            transform: scale(1.1);
-            margin-left: -36px;
-            margin-top: -70px;
-            position: absolute;
-            @media screen and (max-width: 991px){
-                position: relative;
-                margin-top: -50px;
-                transform: scale(1);
-            }
-            @media screen and (max-width:768px){
-                max-width: 600px;
-            }
-            @media screen and (max-width:575px){
-                max-width: 440px;
-            }
+        @media screen and (max-width:575px){
+            max-width: 440px;
         }
     }
 }

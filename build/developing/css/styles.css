@@ -3312,32 +3312,32 @@ footer {
 /*****************
  * INTRO SECTION
 ******************/
-.intro-section .container {
+.page-section .container {
   max-width: 825px;
   margin: 0 auto; }
-.intro-section .intro-section--title, .intro-section h1 {
+.page-section .page-section--title, .page-section h1 {
   font-size: 24px;
   font-weight: bold;
   line-height: 27px;
   color: #2d5792;
   margin: 0;
   padding-top: 56px; }
-.intro-section h2, .intro-section h3, .intro-section h4, .intro-section h5, .intro-section h6 {
+.page-section h2, .page-section h3, .page-section h4, .page-section h5, .page-section h6 {
   color: #2d5792; }
-.intro-section .intro-section--description {
-  margin-top: 24px; }
-  .intro-section .intro-section--description p, .intro-section .intro-section--description ul li {
+.page-section .page-section--description {
+  margin-top: 56px; }
+  .page-section .page-section--description p, .page-section .page-section--description ul li {
     margin-bottom: 23px;
     font-size: 21px;
     font-weight: normal;
     line-height: 27px;
     color: #4f4f57; }
-  .intro-section .intro-section--description p:last-child {
+  .page-section .page-section--description p:last-child {
     margin-bottom: 0; }
-  .intro-section .intro-section--description ul li {
+  .page-section .page-section--description ul li {
     margin-bottom: 0;
     list-style: none; }
-    .intro-section .intro-section--description ul li:before {
+    .page-section .page-section--description ul li:before {
       content: '';
       width: 9px;
       height: 9px;
@@ -3347,7 +3347,7 @@ footer {
       margin-right: 11px;
       margin-bottom: 4px;
       margin-left: -24px; }
-    .intro-section .intro-section--description ul li p {
+    .page-section .page-section--description ul li p {
       display: inline; }
 
 /*****************
@@ -3356,58 +3356,48 @@ footer {
 .about-section {
   position: relative;
   overflow: hidden;
-  margin-top: 56px; }
-  .about-section .about-content {
-    max-width: 760px;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 10rem; }
+  padding-bottom: 10rem; }
+  @media screen and (max-width: 991px) {
+    .about-section {
+      padding-bottom: 0; } }
+  .about-section .about-section--info {
+    margin-top: 34px; }
+  .about-section .about-section--info h4 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #4f4f57;
+    margin: 0;
+    margin-bottom: 17px; }
+    .about-section .about-section--info h4:last-child {
+      margin-bottom: 0; }
+  .about-section .about-section--info h4 a {
+    color: #1b509b;
+    text-decoration: none;
+    margin-left: 5px;
+    font-family: "Rubik", "Helvetica Neue", "Avenir Next", "Segoe UI", "Verdana", sans-serif; }
+  .about-section .about-section--info h4 span {
+    color: #53656d;
+    font-family: "Rubik", "Helvetica Neue", "Avenir Next", "Segoe UI", "Verdana", sans-serif; }
+  .about-section .about-section--img img {
+    max-width: 786px;
+    height: 440px;
+    object-fit: contain;
+    transform: scale(1.1);
+    margin-left: -36px;
+    margin-top: -70px;
+    position: absolute; }
     @media screen and (max-width: 991px) {
-      .about-section .about-content {
-        padding-bottom: 0; } }
-    .about-section .about-content .about-content--description {
-      font-size: 18px;
-      font-weight: normal;
-      line-height: 24px;
-      color: #4f4f57; }
-    .about-section .about-content .about-content--info {
-      margin-top: 34px; }
-    .about-section .about-content .about-content--info h4 {
-      font-size: 18px;
-      font-weight: bold;
-      line-height: 24px;
-      color: #4f4f57;
-      margin: 0;
-      margin-bottom: 17px; }
-      .about-section .about-content .about-content--info h4:last-child {
-        margin-bottom: 0; }
-    .about-section .about-content .about-content--info h4 a {
-      color: #1b509b;
-      text-decoration: none;
-      margin-left: 5px;
-      font-family: "Rubik", "Helvetica Neue", "Avenir Next", "Segoe UI", "Verdana", sans-serif; }
-    .about-section .about-content .about-content--info h4 span {
-      color: #53656d;
-      font-family: "Rubik", "Helvetica Neue", "Avenir Next", "Segoe UI", "Verdana", sans-serif; }
-    .about-section .about-content .about-content--img img {
-      max-width: 786px;
-      height: 440px;
-      object-fit: contain;
-      transform: scale(1.1);
-      margin-left: -36px;
-      margin-top: -70px;
-      position: absolute; }
-      @media screen and (max-width: 991px) {
-        .about-section .about-content .about-content--img img {
-          position: relative;
-          margin-top: -50px;
-          transform: scale(1); } }
-      @media screen and (max-width: 768px) {
-        .about-section .about-content .about-content--img img {
-          max-width: 600px; } }
-      @media screen and (max-width: 575px) {
-        .about-section .about-content .about-content--img img {
-          max-width: 440px; } }
+      .about-section .about-section--img img {
+        position: relative;
+        margin-top: -50px;
+        transform: scale(1); } }
+    @media screen and (max-width: 768px) {
+      .about-section .about-section--img img {
+        max-width: 600px; } }
+    @media screen and (max-width: 575px) {
+      .about-section .about-section--img img {
+        max-width: 440px; } }
 
 /*****************
  * CHOSEN LIBRARY

@@ -1,9 +1,9 @@
-.intro-section{
+.page-section{
     .container {
         max-width: 825px;
         margin: 0 auto;
     }
-    .intro-section--title,h1 {
+    .page-section--title,h1 {
         font-size: 24px;
         font-weight: bold;
         line-height: 27px;
@@ -14,8 +14,8 @@
     h2,h3,h4,h5,h6{
         color: #2d5792;
     }
-    .intro-section--description {
-        margin-top: 24px;
+    .page-section--description {
+        margin-top: 56px;
         p,ul li {
             margin-bottom: 23px;
             font-size: 21px;
