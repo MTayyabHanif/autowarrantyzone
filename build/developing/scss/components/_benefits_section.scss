@@ -15,6 +15,9 @@
             font-weight: bold;
         }
     }
+    @media screen and (max-width:1099px){
+        margin-top: 74px;
+    }
     @media screen and (max-width: 840px){
         .benefit-item{
             max-width: 273px;
