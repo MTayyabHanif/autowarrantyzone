@@ -195,6 +195,10 @@
             width: 24px;
             text-align: center;
         }
+        .form-item-milage.input-error:after {
+            bottom: 16px;
+            border-color: #e00e0e;
+        }
         input::placeholder,
         input::-ms-input-placeholder,
         input::-webkit-input-placeholder{

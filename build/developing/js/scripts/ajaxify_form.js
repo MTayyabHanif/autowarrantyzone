@@ -65,52 +65,62 @@ function validateQuoteForm() {
     if (!$(".quote-form--year").val()) {
         $('.form-item-year .desc').show();
         $('.form-item-year').addClass('error');
+        $('.form-item-year').parent().addClass('input-error');
         valid = false;
     }
     if (!$(".quote-form--make").val()) {
         $('.form-item-make .desc').show();
         $('.form-item-make').addClass('error');
+        $('.form-item-make').parent().addClass('input-error');
         valid = false;
     }
     if (!$(".quote-form--model").val()) {
         $('.form-item-model .desc').show();
         $('.form-item-model').addClass('error');
+        $('.form-item-model').parent().addClass('input-error');
         valid = false;
     }
     if (!$(".quote-form--milage").val()) {
         $('.form-item-milage .desc').show();
         $('.quote-form--milage').addClass('error');
+        $('.quote-form--milage').parent().addClass('input-error');
         valid = false;
     }
     if (!$(".quote-form--firstName").val()) {
         $('.form-item-firstName .desc').show();
         $('.quote-form--firstName').addClass('error');
+        $('.quote-form--firstName').parent().addClass('input-error');
         valid = false;
     }
     if (!$(".quote-form--lastName").val()) {
         $('.form-item-lastName .desc').show();
         $('.quote-form--lastName').addClass('error');
+        $('.quote-form--lastName').parent().addClass('input-error');
         valid = false;
     }
     if (!$(".quote-form--email").val()) {
         $('.form-item-email .desc').show();
         $('.quote-form--email').addClass('error');
+        $('.quote-form--email').parent().addClass('input-error');
         valid = false;
     }
     if (!$(".quote-form--email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
         $('.form-item-email .desc').text('Email is not valid');
         $('.form-item-email .desc').show();
         $('.quote-form--email').addClass('error');
+        $('.quote-form--email').parent().addClass('input-error');
         valid = false;
     }
     if (!$(".quote-form--phone").val()) {
         $('.form-item-phone .desc').show();
         $('.quote-form--phone').addClass('error');
+        $('.quote-form--phone').parent().addClass('input-error');
         valid = false;
     }
     if (!$(".quote-form--zip").val()) {
         $('.form-item-zip .desc').show();
         $('.quote-form--zip').addClass('error');
+        $('.quote-form--zip').parent().addClass('input-error');
         valid = false;
     }
 

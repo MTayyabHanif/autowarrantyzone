@@ -2769,6 +2769,9 @@ input[type="date"], focus {
       border-left: 0;
       width: 24px;
       text-align: center; }
+    .header .quote-form .form-item-milage.input-error:after {
+      bottom: 16px;
+      border-color: #e00e0e; }
     .header .quote-form input::placeholder,
     .header .quote-form input::-ms-input-placeholder,
     .header .quote-form input::-webkit-input-placeholder {
