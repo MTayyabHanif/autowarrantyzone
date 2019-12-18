@@ -11,6 +11,11 @@
         width: 100%;
         margin: 0 auto;
         margin-top: 96px;
+        @media screen and (max-width: 786px){
+            max-width: 544px;
+            margin-left: 0;
+            margin-top: 54px;
+        }
     }
     .services-section--subtitle {
         max-width: 855px;
@@ -27,14 +32,14 @@
         position: absolute;
         left: -106px;
         margin-top: -99px;
-        @media screen and (max-width: 768px){
-            width: 100%;
+        @media screen and (max-width: 786px){
+            width: 56%;
             height: 50%;
             left: auto;
-            right: -38%;
+            right: -25%;
             margin: 0;
-            top: 70%;
-            transform: translateY(-70%) rotateY(180deg);
+            top: 62%;
+            transform: translateY(-62%) rotateY(180deg);
         }
         @media screen and (max-width: 450px){
             right: -45%;
@@ -71,19 +76,36 @@
         max-width: 590px;
         margin-left: auto;
         margin-top: 30px;
+        @media screen and (max-width: 1050px){
+            max-width: 450px;
+        }
         @media screen and (max-width: 768px){
             margin-left: 0;
             padding: 0 13px;
         }
-        @media screen and (max-width: 1050px){
-            max-width: 450px;
+        @media screen and (max-width: 786px){
+            max-width: 91%;
+            margin-left: 0;
+            .row > div {
+                flex-basis: 50%;
+            }
+            .row:last-child > div:first-child {
+                flex-basis: 100%;
+            }
+        }
+        @media screen and (max-width: 760px){
+            .row > div {
+                flex-basis: 100%;
+            }
         }
     }
     .service-covered {
         display: flex;
         margin-bottom: 6px;
-        &:last-child{
-            margin-bottom: 0;
+        @media screen and (min-width:761px){
+            &:last-child{
+                margin-bottom: 0;
+            }
         }
         img.service-covered--img {
             width: 21px;
@@ -104,9 +126,12 @@
         color: #4f4f57;
         margin-top: 44px;
     }
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 786px){
         position: relative;
         overflow: hidden;
+        .row.with-gutter{
+            margin: 0;
+        }
     }
     @media screen and (max-width: 760px){
         .services-section--subtitle {

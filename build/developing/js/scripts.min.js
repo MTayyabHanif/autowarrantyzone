@@ -145,13 +145,16 @@ $.getJSON(apiUrl+"?callback=?", {cmd:"getYears", sold_in_us:1}, function(data) {
 
     var minYear = data.Years.min_year;
     var maxYear = data.Years.max_year;
+
+    selectYear.find('option').remove();
+
     var options = "";
     options += "<option value=''>Select Year</option>";
     for ($i = maxYear; $i >= minYear; $i--){
         options += "<option value="+$i+">"+$i+"</option>";
     }
 
-    selectYear.append(options);
+    selectYear.html(options);
     selectLoading('.form-item-year .chosen-container.chosen-container-single', false);
     selectYear.trigger("chosen:updated");
 
@@ -163,8 +166,6 @@ $('body').on('change', '.form-item-year .quote-form--year', function(){
         selectLoading('.form-item-model .chosen-container.chosen-container-single');
     }
     var selectYearValue = selectYear.val();
-    selectMake.find('option').remove();
-    selectModel.find('option').remove();
     
     $.getJSON(apiUrl+"?callback=?", {cmd:"getMakes", year: selectYearValue, sold_in_us:1}, function(data) {
 
@@ -176,7 +177,7 @@ $('body').on('change', '.form-item-year .quote-form--year', function(){
             options += "<option value="+makes[i].make_id+">"+makes[i].make_display+"</option>";
         }
 
-        selectMake.append(options);
+        selectMake.html(options);
         selectMake.removeAttr('disabled');
         selectMake.parents('.form-item-make').removeClass('non-selectable');
         selectLoading('.form-item-make .chosen-container.chosen-container-single', false);
@@ -206,7 +207,7 @@ $('body').on('change', '.form-item-make .quote-form--make', function(){
             options += "<option value="+models[i].model_make_id+">"+models[i].model_name+"</option>";
         }
 
-        selectModel.append(options);
+        selectModel.html(options);
         selectModel.removeAttr('disabled');
         selectModel.parents('.form-item-model').removeClass('non-selectable');
         selectLoading('.form-item-model .chosen-container.chosen-container-single', false);
@@ -244,10 +245,10 @@ $('#quoteForm input').on('keypress', function(e){
 
 $(function(){
 
-    $('.numeric').keypress(function(e) {
+    $('.numeric').on('keypress', function(e) {
       if(isNaN(this.value+""+String.fromCharCode(e.charCode))) return false;
     })
-    .on("cut copy paste",function(e){
+    .on("cut copy paste input chnage keyup",function(e){
       e.preventDefault();
     });
   

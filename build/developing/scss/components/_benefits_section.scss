@@ -24,7 +24,24 @@
             }
         }
     }
+    @media screen and (max-width: 786px){
+        margin-top: 0;
+        .row.with-gutter > div {
+            flex-basis: 50%;
+        }
+        .row.with-gutter > div:last-child {
+            flex-basis: 50%;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 610px;
+        }
+    }
     @media screen and (max-width: 760px){
+        margin-top: 22px;
+        .row.with-gutter > div {
+            flex-basis: 100%;
+        }
         .benefit-item {
             margin: 0 auto 63px;
         }

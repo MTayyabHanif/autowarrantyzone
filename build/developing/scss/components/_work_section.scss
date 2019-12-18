@@ -28,6 +28,12 @@
         &:first-child{
             margin-top: 56px;
         }
+        @media screen and (max-width:786px) {
+            margin-top: 31px;
+            &:first-child{
+                margin-top: 40px;
+            }
+        }
         img {
             width: 21px;
             height: 21px;
@@ -86,6 +92,11 @@
         @media screen and (max-width: 785px){
             width: 486px;
         }
+        @media screen and (max-width: 786px){
+            width: 750px;
+            right: -56%;
+            top: -48%;
+        }
         @media screen and (max-width: 760px){
             right: -350px;
             top: -470px;
@@ -126,13 +137,11 @@
             width: 230px;
             right: 12%;
         }
-        @media screen and (max-width: 768px){
+        @media screen and (max-width:786px){
+            width: 138px;
+            right: 9%;
             top: auto;
-            bottom: -55%;
-            right: 17%;
-            width: 117px;
-            height: 117px;
-            object-fit: contain;
+            bottom: -257px;
         }
         @media screen and (max-width: 760px){
             bottom: -85%;

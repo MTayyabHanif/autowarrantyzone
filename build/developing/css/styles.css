@@ -2536,6 +2536,10 @@ input[type="date"], focus {
   .navbar .navbar--logo img {
     max-width: 280px;
     object-fit: contain; }
+    @media screen and (max-width: 786px) {
+      .navbar .navbar--logo img {
+        max-width: 258px;
+        height: 64px; } }
   .navbar a.navbar--phone {
     display: flex;
     color: #000;
@@ -2547,14 +2551,27 @@ input[type="date"], focus {
     .navbar a.navbar--phone span .number {
       font-weight: 600;
       line-height: 1; }
+    @media screen and (max-width: 786px) {
+      .navbar a.navbar--phone {
+        max-width: 240px;
+        width: 100%;
+        height: 56px;
+        border-radius: 4px;
+        border: solid 1px #65707e;
+        align-items: center;
+        justify-content: center;
+        margin-top: 16px; }
+        .navbar a.navbar--phone img {
+          margin: 0;
+          width: 36px; }
+        .navbar a.navbar--phone > span {
+          font-size: 16px; }
+        .navbar a.navbar--phone span.number {
+          font-size: 23px; } }
   @media screen and (max-width: 760px) {
     .navbar {
       justify-content: center;
       display: grid; }
-      .navbar .navbar--logo img {
-        max-width: 258px;
-        height: 64px;
-        object-fit: contain; }
       .navbar a.navbar--phone {
         max-width: 258px;
         width: 100%;
@@ -2572,6 +2589,12 @@ input[type="date"], focus {
 ******************/
 .header {
   min-height: 765px; }
+  @media screen and (max-width: 786px) {
+    .header {
+      margin-bottom: -53px; } }
+  @media screen and (max-width: 760px) {
+    .header {
+      margin-bottom: 0; } }
   .header .header_bg {
     background-image: url("../img/headerBg.png");
     background-size: cover;
@@ -2581,6 +2604,9 @@ input[type="date"], focus {
     height: 100vh;
     width: 100%;
     position: absolute; }
+    @media screen and (max-width: 786px) {
+      .header .header_bg {
+        max-height: 636px; } }
   .header .container {
     position: relative; }
     @media screen and (max-width: 760px) {
@@ -2592,6 +2618,13 @@ input[type="date"], focus {
     padding-top: 46px; }
     .header h1 span {
       color: #fff; }
+    @media screen and (max-width: 786px) {
+      .header h1 {
+        font-size: 43px;
+        line-height: 48px;
+        text-align: left;
+        max-width: 570px;
+        margin: 0 auto; } }
   .header .header-content .header-content--img {
     width: 849px;
     height: 635px;
@@ -2622,7 +2655,14 @@ input[type="date"], focus {
         margin-top: 100px; } }
     @media screen and (max-width: 786px) {
       .header .header-content .header-content--img {
-        width: 67%; } }
+        max-width: 660px;
+        width: 100%;
+        height: 398px;
+        object-fit: cover;
+        margin: 0 auto;
+        transform: scale(1.04);
+        margin-left: 0px;
+        margin-top: -32px; } }
     @media screen and (max-width: 760px) {
       .header .header-content .header-content--img {
         margin: 0 auto;
@@ -2672,7 +2712,7 @@ input[type="date"], focus {
     @media screen and (max-width: 770px) {
       .header .header-content .header-content--arrow {
         top: 293px; } }
-    @media screen and (max-width: 760px) {
+    @media screen and (max-width: 786px) {
       .header .header-content .header-content--arrow {
         display: none; } }
   .header .quote-form {
@@ -2689,13 +2729,20 @@ input[type="date"], focus {
       @media screen and (max-width: 1100px) {
         .header .quote-form .quote-form--wrapper {
           padding: 40px 20px; } }
+      @media screen and (max-width: 786px) {
+        .header .quote-form .quote-form--wrapper {
+          padding: 40px 36px; } }
+      @media screen and (max-width: 400px) {
+        .header .quote-form .quote-form--wrapper {
+          padding: 40px 20px; } }
     .header .quote-form .form-errors {
       display: none;
       width: 100%; }
     .header .quote-form form label {
       color: #4c5c63; }
     .header .quote-form form select {
-      color: #afb1b4; }
+      color: #afb1b4;
+      font-style: normal; }
     .header .quote-form form select, .header .quote-form form input {
       border-radius: 2px;
       border: solid 1px #afb1b4;
@@ -2792,13 +2839,20 @@ input[type="date"], focus {
       .header .quote-form {
         right: 20px;
         max-width: 368px; } }
+    @media screen and (max-width: 786px) {
+      .header .quote-form {
+        position: relative;
+        right: 0;
+        max-width: 476px;
+        width: 100%;
+        left: 0;
+        margin: 0 auto;
+        top: -102px;
+        z-index: 1; } }
     @media screen and (max-width: 779px) {
       .header .quote-form {
         right: 20px;
         max-width: 368px; } }
-    @media screen and (max-width: 770px) {
-      .header .quote-form {
-        top: 295px; } }
   .header.terms-header, .header.about-header {
     min-height: auto; }
     .header.terms-header .header_bg, .header.about-header .header_bg {
@@ -2819,18 +2873,11 @@ input[type="date"], focus {
       height: 622px; }
     .header h1 {
       padding: 43px 0 0 35px;
-      font-size: 43px;
       font-weight: 800;
       text-align: left; }
     .header .quote-form {
-      position: relative;
-      right: 0;
       max-width: 400px;
-      width: 100%;
-      left: 0;
-      margin: 0 auto;
       top: 60px;
-      z-index: 1;
       margin-bottom: 100px; } }
   @media screen and (max-width: 409px) {
     .header h1 {
@@ -2914,9 +2961,23 @@ footer {
       text-align: center; }
       .benefits_section .benefit-item img {
         margin: 0 auto; } }
+  @media screen and (max-width: 786px) {
+    .benefits_section {
+      margin-top: 0; }
+      .benefits_section .row.with-gutter > div {
+        flex-basis: 50%; }
+      .benefits_section .row.with-gutter > div:last-child {
+        flex-basis: 50%;
+        margin: 0 auto; }
+      .benefits_section .container {
+        max-width: 610px; } }
   @media screen and (max-width: 760px) {
-    .benefits_section .benefit-item {
-      margin: 0 auto 63px; } }
+    .benefits_section {
+      margin-top: 22px; }
+      .benefits_section .row.with-gutter > div {
+        flex-basis: 100%; }
+      .benefits_section .benefit-item {
+        margin: 0 auto 63px; } }
 
 /*****************
  * WORK SECTION
@@ -2948,6 +3009,11 @@ footer {
     margin-top: 49px; }
     .work_section .working-point:first-child {
       margin-top: 56px; }
+    @media screen and (max-width: 786px) {
+      .work_section .working-point {
+        margin-top: 31px; }
+        .work_section .working-point:first-child {
+          margin-top: 40px; } }
     .work_section .working-point img {
       width: 21px;
       height: 21px;
@@ -3002,6 +3068,11 @@ footer {
     @media screen and (max-width: 785px) {
       .work_section .work_section--car-img img {
         width: 486px; } }
+    @media screen and (max-width: 786px) {
+      .work_section .work_section--car-img img {
+        width: 750px;
+        right: -56%;
+        top: -48%; } }
     @media screen and (max-width: 760px) {
       .work_section .work_section--car-img img {
         right: -350px;
@@ -3041,14 +3112,12 @@ footer {
       .work_section .work_section--hassle-free-img img {
         width: 230px;
         right: 12%; } }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 786px) {
       .work_section .work_section--hassle-free-img img {
+        width: 138px;
+        right: 9%;
         top: auto;
-        bottom: -55%;
-        right: 17%;
-        width: 117px;
-        height: 117px;
-        object-fit: contain; } }
+        bottom: -257px; } }
     @media screen and (max-width: 760px) {
       .work_section .work_section--hassle-free-img img {
         bottom: -85%; } }
@@ -3106,6 +3175,11 @@ footer {
   width: 100%;
   margin: 0 auto;
   margin-top: 96px; }
+  @media screen and (max-width: 786px) {
+    .services-section .services-section--title {
+      max-width: 544px;
+      margin-left: 0;
+      margin-top: 54px; } }
 .services-section .services-section--subtitle {
   max-width: 855px;
   width: 100%;
@@ -3120,15 +3194,15 @@ footer {
   position: absolute;
   left: -106px;
   margin-top: -99px; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 786px) {
     .services-section .services-section--img img {
-      width: 100%;
+      width: 56%;
       height: 50%;
       left: auto;
-      right: -38%;
+      right: -25%;
       margin: 0;
-      top: 70%;
-      transform: translateY(-70%) rotateY(180deg); } }
+      top: 62%;
+      transform: translateY(-62%) rotateY(180deg); } }
   @media screen and (max-width: 450px) {
     .services-section .services-section--img img {
       right: -45%;
@@ -3163,18 +3237,30 @@ footer {
   max-width: 590px;
   margin-left: auto;
   margin-top: 30px; }
+  @media screen and (max-width: 1050px) {
+    .services-section .service-section--content {
+      max-width: 450px; } }
   @media screen and (max-width: 768px) {
     .services-section .service-section--content {
       margin-left: 0;
       padding: 0 13px; } }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 786px) {
     .services-section .service-section--content {
-      max-width: 450px; } }
+      max-width: 91%;
+      margin-left: 0; }
+      .services-section .service-section--content .row > div {
+        flex-basis: 50%; }
+      .services-section .service-section--content .row:last-child > div:first-child {
+        flex-basis: 100%; } }
+  @media screen and (max-width: 760px) {
+    .services-section .service-section--content .row > div {
+      flex-basis: 100%; } }
 .services-section .service-covered {
   display: flex;
   margin-bottom: 6px; }
-  .services-section .service-covered:last-child {
-    margin-bottom: 0; }
+  @media screen and (min-width: 761px) {
+    .services-section .service-covered:last-child {
+      margin-bottom: 0; } }
   .services-section .service-covered img.service-covered--img {
     width: 21px;
     height: 21px;
@@ -3189,10 +3275,12 @@ footer {
   font-weight: bold;
   color: #4f4f57;
   margin-top: 44px; }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 786px) {
   .services-section {
     position: relative;
-    overflow: hidden; } }
+    overflow: hidden; }
+    .services-section .row.with-gutter {
+      margin: 0; } }
 @media screen and (max-width: 760px) {
   .services-section .services-section--subtitle {
     font-size: 21px;

@@ -1,5 +1,11 @@
 .header{
     min-height: 765px;
+    @media screen and (max-width:786px){
+        margin-bottom: -53px;
+    }
+    @media screen and (max-width:760px){
+        margin-bottom: 0;
+    }
     .header_bg{
         background-image: url('../img/headerBg.png');
         background-size: cover;
@@ -9,6 +15,9 @@
         height: 100vh;
         width: 100%;
         position: absolute;
+        @media screen and (max-width:786px){
+            max-height: 636px;
+        }
     }
     .container{
         position: relative;
@@ -22,6 +31,13 @@
         padding-top: 46px;
         span{
             color: #fff;
+        }
+        @media screen and (max-width:786px){
+            font-size: 43px;
+            line-height: 48px;
+            text-align: left;
+            max-width: 570px;
+            margin: 0 auto;
         }
     }
     .header-content{
@@ -54,7 +70,14 @@
                 margin-top: 100px;
             }
             @media screen and (max-width: 786px){
-                width: 67%;
+                max-width: 660px;
+                width: 100%;
+                height: 398px;
+                object-fit: cover;
+                margin: 0 auto;
+                transform: scale(1.04);
+                margin-left: 0px;
+                margin-top: -32px;
             }
             @media screen and (max-width: 760px){
                 margin: 0 auto;
@@ -106,7 +129,7 @@
             @media screen and (max-width: 770px){
                 top: 293px;
             }
-            @media screen and (max-width: 760px){
+            @media screen and (max-width: 786px){
                 display: none;
             }
         }
@@ -125,6 +148,12 @@
             @media screen and (max-width: 1100px){
                 padding: 40px 20px;
             }
+            @media screen and (max-width: 786px){
+                padding: 40px 36px;
+            }
+            @media screen and (max-width: 400px){
+                padding: 40px 20px;
+            }
         }
         .form-errors{
             display: none;
@@ -135,6 +164,7 @@
         }
         form select{
             color: #afb1b4;
+            font-style: normal;
         }
         form select, form input{
             border-radius: 2px;
@@ -238,12 +268,19 @@
             right: 20px;
             max-width: 368px;
         }
+        @media screen and (max-width: 786px){
+            position: relative;
+            right: 0;
+            max-width: 476px;
+            width: 100%;
+            left: 0;
+            margin: 0 auto;
+            top: -102px;
+            z-index: 1;
+        }
         @media screen and (max-width: 779px){
             right: 20px;
             max-width: 368px;
-        }
-        @media screen and (max-width: 770px){
-            top: 295px;
         }
     }
     &.terms-header,&.about-header{
@@ -272,19 +309,12 @@
         }
         h1{
             padding: 43px 0 0 35px;
-            font-size: 43px;
             font-weight: 800;
             text-align: left;
         }
         .quote-form {
-            position: relative;
-            right: 0;
             max-width: 400px;
-            width: 100%;
-            left: 0;
-            margin: 0 auto;
             top: 60px;
-            z-index: 1;
             margin-bottom: 100px;
         }
     }
