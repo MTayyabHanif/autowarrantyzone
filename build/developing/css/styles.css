@@ -3233,7 +3233,8 @@ footer {
   @media screen and (max-width: 450px) {
     .services-section .services-section--img img {
       right: -45%;
-      top: 72%; } }
+      top: 72%;
+      width: 100%; } }
   @media screen and (max-width: 424px) {
     .services-section .services-section--img img {
       right: -42%;
