@@ -3161,6 +3161,10 @@ footer {
       .work_section .work_section--hassle-free-img img {
         bottom: -531px;
         right: 49px; } }
+    @media screen and (max-width: 786px) {
+      .work_section .work_section--hassle-free-img img {
+        bottom: -569px;
+        width: 117px; } }
     @media screen and (max-width: 424px) {
       .work_section .work_section--hassle-free-img img {
         bottom: -569px;
