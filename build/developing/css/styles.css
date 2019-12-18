@@ -2746,8 +2746,12 @@ input[type="date"], focus {
     .header .quote-form form select, .header .quote-form form input {
       border-radius: 2px;
       border: solid 1px #afb1b4;
-      color: #2d64b4;
-      -webkit-text-fill-color: #2d64b4; }
+      color: #2d64b4; }
+    .header .quote-form input::placeholder,
+    .header .quote-form input::-ms-input-placeholder,
+    .header .quote-form input::-webkit-input-placeholder {
+      color: #afb1b4;
+      -webkit-text-fill-color: #afb1b4; }
     .header .quote-form .form-item {
       margin-top: 24px;
       position: relative; }

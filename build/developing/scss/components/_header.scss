@@ -170,7 +170,12 @@
             border-radius: 2px;
             border: solid 1px #afb1b4;
             color: #2d64b4;
-            -webkit-text-fill-color: #2d64b4;
+        }
+        input::placeholder,
+        input::-ms-input-placeholder,
+        input::-webkit-input-placeholder{
+            color: #afb1b4;
+            -webkit-text-fill-color: #afb1b4;
         }
         .form-item{
             margin-top: 24px;
