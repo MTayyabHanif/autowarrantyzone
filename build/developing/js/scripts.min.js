@@ -10,28 +10,16 @@ function sendFormMessage() {
     $('.form-errors').hide();
     if (valid === true) {
         $('.quote-form button').addClass('disabled');
-        var yearValue = $(".quote-form--year").val();
-        var makeValue = $(".quote-form--make").val();
-        var modelValue = $(".quote-form--model").val();
-        var milageValue = $(".quote-form--milage").val();
-        var firstNameValue = $(".quote-form--firstName").val();
-        var lastNameValue = $(".quote-form--model").val();
-        var emailValue = $(".quote-form--email").val();
-        var phoneValue = $(".quote-form--phone").val();
-        var zipValue = $(".quote-form--zip").val();
         var errors = "";
-        var ajaxUrl = "https://lafires.com/d.ashx?ckm_campaign_id=14&ckm_key=GyDWoqNdMlM&ckm_test=1&"+$('#quoteForm').serialize()+"";
-        console.log(ajaxUrl);
+        var formSerialize = $('#quoteForm').serialize();
+        var ajaxUrl = "https://lafires.com/d.ashx?ckm_campaign_id=14&ckm_key=GyDWoqNdMlM&ckm_test=1&"+formSerialize+"";
         jQuery.ajax({
             url: ajaxUrl,
             type: "GET",
             dataType: 'jsonp',
             success: function(data) {
-                // $('.form-success').show();
-                // $(".form-success").html(data);
-                console.log(data);
                 if(data.success == true){
-                    location.href = "https://autowarrantyzone.com"
+                    location.href = data.nextPage;
                     return true;
                 }
                 if(data.errors){
@@ -52,72 +40,84 @@ function sendFormMessage() {
             }
         });
     } else {
-        // $('.form-error').show();
         $('.form-error').html(valid);
     }
 }
 
+
 function validateQuoteForm() {
+    
+    var yearValue = $(".quote-form--year").val();
+    var makeValue = $(".quote-form--make").val();
+    var modelValue = $(".quote-form--model").val();
+    var milageValue = $(".quote-form--milage").val();
+    var firstNameValue = $(".quote-form--firstName").val();
+    var lastNameValue = $(".quote-form--lastName").val();
+    var emailValue = $(".quote-form--email").val();
+    var phoneValue = $(".quote-form--phone").val();
+    var zipValue = $(".quote-form--zip").val();
     var valid = "";
+
     $('input,textarea,.form-item').removeClass('error');
+    $('.form-item').removeClass('input-error');
     $('.form-item .desc').hide();
 
-    if (!$(".quote-form--year").val()) {
+    if (!yearValue.trim()) {
         $('.form-item-year .desc').show();
         $('.form-item-year').addClass('error');
         $('.form-item-year').parent().addClass('input-error');
         valid = false;
     }
-    if (!$(".quote-form--make").val()) {
+    if (!makeValue.trim()) {
         $('.form-item-make .desc').show();
         $('.form-item-make').addClass('error');
         $('.form-item-make').parent().addClass('input-error');
         valid = false;
     }
-    if (!$(".quote-form--model").val()) {
+    if (!modelValue.trim()) {
         $('.form-item-model .desc').show();
         $('.form-item-model').addClass('error');
         $('.form-item-model').parent().addClass('input-error');
         valid = false;
     }
-    if (!$(".quote-form--milage").val()) {
+    if (!milageValue.trim()) {
         $('.form-item-milage .desc').show();
         $('.quote-form--milage').addClass('error');
         $('.quote-form--milage').parent().addClass('input-error');
         valid = false;
     }
-    if (!$(".quote-form--firstName").val()) {
+    if (!firstNameValue.trim()) {
         $('.form-item-firstName .desc').show();
         $('.quote-form--firstName').addClass('error');
         $('.quote-form--firstName').parent().addClass('input-error');
         valid = false;
     }
-    if (!$(".quote-form--lastName").val()) {
+    if (!lastNameValue.trim()) {
         $('.form-item-lastName .desc').show();
         $('.quote-form--lastName').addClass('error');
         $('.quote-form--lastName').parent().addClass('input-error');
         valid = false;
     }
-    if (!$(".quote-form--email").val()) {
+    if (!emailValue.trim()) {
         $('.form-item-email .desc').show();
         $('.quote-form--email').addClass('error');
         $('.quote-form--email').parent().addClass('input-error');
         valid = false;
     }
-    if (!$(".quote-form--email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+    if (!emailValue.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
         $('.form-item-email .desc').text('Email is not valid');
         $('.form-item-email .desc').show();
         $('.quote-form--email').addClass('error');
         $('.quote-form--email').parent().addClass('input-error');
         valid = false;
     }
-    if (!$(".quote-form--phone").val()) {
+    if (!phoneValue.trim()) {
         $('.form-item-phone .desc').show();
         $('.quote-form--phone').addClass('error');
         $('.quote-form--phone').parent().addClass('input-error');
         valid = false;
     }
-    if (!$(".quote-form--zip").val()) {
+    if (!zipValue.trim()) {
         $('.form-item-zip .desc').show();
         $('.quote-form--zip').addClass('error');
         $('.quote-form--zip').parent().addClass('input-error');
@@ -227,15 +227,6 @@ $('body').on('change', '.form-item-make .quote-form--make', function(){
 
 });
 
-$('input[type=number]').on('keypress', function(e){
-    var x=e.which||e.keycode;
-    if((x>=48 && x<=57) || x==8 ||
-        (x>=35 && x<=40)|| x==46)
-        return true;
-    else
-        return false;
-});
-
 $('#quoteForm input').on('keypress', function(e){
     var maxLength = parseInt($(this).attr('maxlength'));
     var curentValLength = $(this).val().length;
@@ -249,16 +240,12 @@ $('#quoteForm input').on('keypress', function(e){
     }
 });
 
-// $(document).on("input", ".numeric", function() {
-//     this.value = this.value.replace(/\D/g,'');
-// });
-
 $(function(){
 
     $('.numeric').on('keypress', function(e) {
       if(isNaN(this.value+""+String.fromCharCode(e.charCode))) return false;
     })
-    .on("cut copy paste input chnage keyup",function(e){
+    .on("cut copy paste",function(e){
       e.preventDefault();
     });
   
