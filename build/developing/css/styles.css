@@ -2537,7 +2537,7 @@ input[type="date"], focus {
     max-width: 280px;
     width: 100%;
     object-fit: contain; }
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 800px) {
       .navbar .navbar--logo img {
         max-width: 258px;
         height: 64px; } }
@@ -2548,11 +2548,13 @@ input[type="date"], focus {
     .navbar a.navbar--phone > span {
       color: #4f4f57;
       margin-left: 17px;
-      line-height: 1; }
+      line-height: 1;
+      display: grid; }
     .navbar a.navbar--phone span .number {
       font-weight: 600;
-      line-height: 1; }
-    @media screen and (max-width: 786px) {
+      line-height: 1;
+      margin-top: 2px; }
+    @media screen and (max-width: 800px) {
       .navbar a.navbar--phone {
         max-width: 240px;
         width: 100%;
@@ -2574,22 +2576,14 @@ input[type="date"], focus {
       display: grid; }
       .navbar a.navbar--phone {
         max-width: 258px;
-        width: 100%;
-        height: 56px;
-        border-radius: 4px;
-        border: solid 1px #96b3bf;
-        align-items: center;
-        justify-content: center;
-        margin-top: 16px; }
-        .navbar a.navbar--phone img {
-          margin: 0; } }
+        margin-top: 16px; } }
 
 /*****************
  * HEADER
 ******************/
 .header {
   min-height: 765px; }
-  @media screen and (max-width: 786px) {
+  @media screen and (max-width: 800px) {
     .header {
       margin-bottom: -53px; } }
   @media screen and (max-width: 760px) {
@@ -2604,7 +2598,7 @@ input[type="date"], focus {
     height: 100vh;
     width: 100%;
     position: absolute; }
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 800px) {
       .header .header_bg {
         max-height: 636px; } }
   .header .container {
@@ -2618,7 +2612,7 @@ input[type="date"], focus {
     padding-top: 46px; }
     .header h1 span {
       color: #fff; }
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 800px) {
       .header h1 {
         font-size: 43px;
         line-height: 48px;
@@ -2653,7 +2647,7 @@ input[type="date"], focus {
     @media screen and (max-width: 825px) {
       .header .header-content .header-content--img {
         margin-top: 100px; } }
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 800px) {
       .header .header-content .header-content--img {
         max-width: 660px;
         width: 100%;
@@ -2705,14 +2699,14 @@ input[type="date"], focus {
       .header .header-content .header-content--arrow {
         left: 44%;
         transform: translateX(-44%); } }
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 800px) {
       .header .header-content .header-content--arrow {
         left: 40%;
         transform: translateX(-40%); } }
     @media screen and (max-width: 770px) {
       .header .header-content .header-content--arrow {
         top: 293px; } }
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 800px) {
       .header .header-content .header-content--arrow {
         display: none; } }
   .header .quote-form {
@@ -2729,7 +2723,7 @@ input[type="date"], focus {
       @media screen and (max-width: 1100px) {
         .header .quote-form .quote-form--wrapper {
           padding: 40px 20px; } }
-      @media screen and (max-width: 786px) {
+      @media screen and (max-width: 800px) {
         .header .quote-form .quote-form--wrapper {
           padding: 40px 36px; } }
       @media screen and (max-width: 400px) {
@@ -2750,10 +2744,10 @@ input[type="date"], focus {
       border-radius: 2px;
       border: solid 1px #afb1b4;
       color: #2d64b4; }
-    .header .quote-form .quote-form--milage {
-      padding-right: 46px; }
-    .header .quote-form .form-item-milage:after {
-      content: "KM";
+    .header .quote-form .quote-form--mileage {
+      padding-right: 70px; }
+    .header .quote-form .form-item-mileage:after {
+      content: "MILES";
       position: absolute;
       bottom: 0;
       right: 0;
@@ -2767,9 +2761,9 @@ input[type="date"], focus {
       font-size: 16px;
       border: 1px solid #afb1b4;
       border-left: 0;
-      width: 24px;
+      width: 48px;
       text-align: center; }
-    .header .quote-form .form-item-milage.input-error:after {
+    .header .quote-form .form-item-mileage.input-error:after {
       bottom: 16px;
       border-color: #e00e0e; }
     .header .quote-form input::placeholder,
@@ -2786,7 +2780,7 @@ input[type="date"], focus {
     .header .quote-form .form-item .button, .header .quote-form .form-item [type=button],
     .header .quote-form .form-item [type=submit],
     .header .quote-form .form-item button {
-      width: 368px;
+      width: 100%;
       height: 56px;
       border-radius: 2px;
       box-shadow: 0 4px 20px -6px rgba(0, 0, 0, 0.42);
@@ -2850,7 +2844,7 @@ input[type="date"], focus {
     .header .quote-form .form-item-model.non-selectable:hover:after {
       opacity: 1;
       visibility: visible; }
-    .header .quote-form .form-item.error .chosen-container .chosen-single {
+    .header .quote-form select.error ~ .chosen-container .chosen-single {
       background-color: rgba(240, 60, 105, 0.1);
       border: 1px solid #e00e0e; }
     .header .quote-form input.error {
@@ -2868,7 +2862,7 @@ input[type="date"], focus {
       .header .quote-form {
         right: 20px;
         max-width: 368px; } }
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 800px) {
       .header .quote-form {
         position: relative;
         right: 0;
@@ -2996,7 +2990,7 @@ footer {
       text-align: center; }
       .benefits_section .benefit-item img {
         margin: 0 auto; } }
-  @media screen and (max-width: 786px) {
+  @media screen and (max-width: 800px) {
     .benefits_section {
       margin-top: 0; }
       .benefits_section .row.with-gutter > div {
@@ -3044,7 +3038,7 @@ footer {
     margin-top: 49px; }
     .work_section .working-point:first-child {
       margin-top: 56px; }
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 800px) {
       .work_section .working-point {
         margin-top: 31px; }
         .work_section .working-point:first-child {
@@ -3103,11 +3097,11 @@ footer {
     @media screen and (max-width: 785px) {
       .work_section .work_section--car-img img {
         width: 486px; } }
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 800px) {
       .work_section .work_section--car-img img {
-        width: 750px;
-        right: -56%;
-        top: -48%; } }
+        width: 800px;
+        right: -59%;
+        top: -60%; } }
     @media screen and (max-width: 760px) {
       .work_section .work_section--car-img img {
         right: -350px;
@@ -3148,7 +3142,7 @@ footer {
       .work_section .work_section--hassle-free-img img {
         width: 230px;
         right: 12%; } }
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 800px) {
       .work_section .work_section--hassle-free-img img {
         width: 138px;
         right: 9%;
@@ -3164,10 +3158,6 @@ footer {
       .work_section .work_section--hassle-free-img img {
         bottom: -531px;
         right: 49px; } }
-    @media screen and (max-width: 786px) {
-      .work_section .work_section--hassle-free-img img {
-        bottom: -569px;
-        width: 117px; } }
     @media screen and (max-width: 424px) {
       .work_section .work_section--hassle-free-img img {
         bottom: -569px;
@@ -3215,7 +3205,7 @@ footer {
   width: 100%;
   margin: 0 auto;
   margin-top: 96px; }
-  @media screen and (max-width: 786px) {
+  @media screen and (max-width: 800px) {
     .services-section .services-section--title {
       max-width: 544px;
       margin-left: 0;
@@ -3234,7 +3224,7 @@ footer {
   position: absolute;
   left: -106px;
   margin-top: -99px; }
-  @media screen and (max-width: 786px) {
+  @media screen and (max-width: 800px) {
     .services-section .services-section--img img {
       width: 56%;
       height: 50%;
@@ -3280,7 +3270,7 @@ footer {
     .services-section .service-section--content {
       margin-left: 0;
       padding: 0 13px; } }
-  @media screen and (max-width: 786px) {
+  @media screen and (max-width: 800px) {
     .services-section .service-section--content {
       max-width: 91%;
       margin-left: 0; }
@@ -3311,7 +3301,7 @@ footer {
   font-weight: bold;
   color: #4f4f57;
   margin-top: 44px; }
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 800px) {
   .services-section {
     position: relative;
     overflow: hidden; }

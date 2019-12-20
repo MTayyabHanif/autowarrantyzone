@@ -1,6 +1,6 @@
 .header{
     min-height: 765px;
-    @media screen and (max-width:786px){
+    @media screen and (max-width:800px){
         margin-bottom: -53px;
     }
     @media screen and (max-width:760px){
@@ -15,7 +15,7 @@
         height: 100vh;
         width: 100%;
         position: absolute;
-        @media screen and (max-width:786px){
+        @media screen and (max-width:800px){
             max-height: 636px;
         }
     }
@@ -32,7 +32,7 @@
         span{
             color: #fff;
         }
-        @media screen and (max-width:786px){
+        @media screen and (max-width:800px){
             font-size: 43px;
             line-height: 48px;
             text-align: left;
@@ -69,7 +69,7 @@
             @media screen and (max-width: 825px){
                 margin-top: 100px;
             }
-            @media screen and (max-width: 786px){
+            @media screen and (max-width: 800px){
                 max-width: 660px;
                 width: 100%;
                 height: 398px;
@@ -122,14 +122,14 @@
                 left: 44%;
                 transform: translateX(-44%);
             }
-            @media screen and (max-width: 786px){
+            @media screen and (max-width: 800px){
                 left: 40%;
                 transform: translateX(-40%);
             }
             @media screen and (max-width: 770px){
                 top: 293px;
             }
-            @media screen and (max-width: 786px){
+            @media screen and (max-width: 800px){
                 display: none;
             }
         }
@@ -148,7 +148,7 @@
             @media screen and (max-width: 1100px){
                 padding: 40px 20px;
             }
-            @media screen and (max-width: 786px){
+            @media screen and (max-width: 800px){
                 padding: 40px 36px;
             }
             @media screen and (max-width: 400px){
@@ -174,11 +174,11 @@
             border: solid 1px #afb1b4;
             color: #2d64b4;
         }
-        .quote-form--milage {
-            padding-right: 46px;
+        .quote-form--mileage {
+            padding-right: 70px;
         }
-        .form-item-milage:after {
-            content: "KM";
+        .form-item-mileage:after {
+            content: "MILES";
             position: absolute;
             bottom: 0;
             right: 0;
@@ -192,10 +192,10 @@
             font-size: 16px;
             border: 1px solid #afb1b4;
             border-left: 0;
-            width: 24px;
+            width: 48px;
             text-align: center;
         }
-        .form-item-milage.input-error:after {
+        .form-item-mileage.input-error:after {
             bottom: 16px;
             border-color: #e00e0e;
         }
@@ -214,7 +214,7 @@
             }
         }
         .form-item .button {
-            width: 368px;
+            width: 100%;
             height: 56px;
             border-radius: 2px;
             box-shadow: 0 4px 20px -6px rgba(0,0,0, 0.42);
@@ -280,7 +280,7 @@
             opacity: 1;
             visibility: visible;
         }
-        .form-item.error .chosen-container .chosen-single {
+        select.error~.chosen-container .chosen-single {
             background-color: rgba(240, 60, 105, 0.1);
             border: 1px solid #e00e0e;
         }
@@ -301,7 +301,7 @@
             right: 20px;
             max-width: 368px;
         }
-        @media screen and (max-width: 786px){
+        @media screen and (max-width: 800px){
             position: relative;
             right: 0;
             max-width: 476px;
