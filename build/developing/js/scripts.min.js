@@ -4,6 +4,9 @@ $("#quoteForm").submit(function (event) {
 });
 
 function sendFormMessage() {
+    var phoneMaskVal = $('.quote-form--phone').val().replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '');
+    phoneMaskVal = phoneMaskVal.substring(1, phoneMaskVal.length);
+    $('.quote-form--phone-formatted').val(phoneMaskVal);
     var valid = true;
     $("select,.form-item--input").each(function () {
         valid = validateInput(this);
@@ -20,6 +23,8 @@ function sendFormMessage() {
             type: "GET",
             dataType: 'jsonp',
             success: function (data) {
+                console.log(data);
+                
                 if (data.success == true) {
                     location.href = data.nextPage;
                     return true;
@@ -45,91 +50,6 @@ function sendFormMessage() {
         $('.form-error').html(valid);
     }
 }
-
-
-// function validateQuoteForm() {
-
-//     var yearValue = $(".quote-form--year").val();
-//     var makeValue = $(".quote-form--make").val();
-//     var modelValue = $(".quote-form--model").val();
-//     var mileageValue = $(".quote-form--mileage").val();
-//     var firstNameValue = $(".quote-form--firstName").val();
-//     var lastNameValue = $(".quote-form--lastName").val();
-//     var emailValue = $(".quote-form--email").val();
-//     var phoneValue = $(".quote-form--phone").val();
-//     var zipValue = $(".quote-form--zip").val();
-//     var valid = "";
-
-//     $('input,textarea,.form-item').removeClass('error');
-//     $('.form-item').removeClass('input-error');
-//     $('.form-item .desc').hide();
-
-//     if (!yearValue.trim()) {
-//         $('.form-item-year .desc').show();
-//         $('.form-item-year').addClass('error');
-//         valid = false;
-//     }
-//     if (!makeValue.trim()) {
-//         $('.form-item-make .desc').show();
-//         $('.form-item-make').addClass('error');
-//         valid = false;
-//     }
-//     if (!modelValue.trim()) {
-//         $('.form-item-model .desc').show();
-//         $('.form-item-model').addClass('error');
-//         valid = false;
-//     }
-//     if (!mileageValue.trim()) {
-//         $('.form-item-mileage .desc').show();
-//         $('.quote-form--mileage').addClass('error');
-//         $('.quote-form--mileage').parent().addClass('input-error');
-//         valid = false;
-//     }
-//     if (!firstNameValue.trim()) {
-//         $('.form-item-firstName .desc').show();
-//         $('.quote-form--firstName').addClass('error');
-//         $('.quote-form--firstName').parent().addClass('input-error');
-//         valid = false;
-//     }
-//     if (!lastNameValue.trim()) {
-//         $('.form-item-lastName .desc').show();
-//         $('.quote-form--lastName').addClass('error');
-//         $('.quote-form--lastName').parent().addClass('input-error');
-//         valid = false;
-//     }
-//     if (!emailValue.trim()) {
-//         $('.form-item-email .desc').show();
-//         $('.quote-form--email').addClass('error');
-//         $('.quote-form--email').parent().addClass('input-error');
-//         valid = false;
-//     }
-//     if (!emailValue.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
-//         $('.form-item-email .desc').text('Email is not valid');
-//         $('.form-item-email .desc').show();
-//         $('.quote-form--email').addClass('error');
-//         $('.quote-form--email').parent().addClass('input-error');
-//         valid = false;
-//     }
-//     if (!phoneValue.trim()) {
-//         $('.form-item-phone .desc').show();
-//         $('.quote-form--phone').addClass('error');
-//         $('.quote-form--phone').parent().addClass('input-error');
-//         valid = false;
-//     }
-//     if (!zipValue.trim()) {
-//         $('.form-item-zip .desc').show();
-//         $('.quote-form--zip').addClass('error');
-//         $('.quote-form--zip').parent().addClass('input-error');
-//         valid = false;
-//     }
-
-//     if(valid === ""){
-//         valid = true;
-//     }
-
-
-//     return valid;
-// }
 
 function validateInput(elem) {
     var elem = $(elem);
@@ -277,9 +197,12 @@ $('#quoteForm select').on('change', function (e) {
 $(".quote-form--phone").keydown(function (e) {
     var numLength = $(this).val().length;
     var numValue = $(this).val();
-    if (numLength == 3 && e.which != 8 && e.which != 0) {
-        $(this).val('(' + numValue + ')' + " ");
-    } else if ((numLength == 9 || numLength == 13) && e.which != 8 && e.which != 0) {
+    if (numLength == 0 && e.which != 8 && e.which != 0) {
+        $(this).val('+1 ' + numValue);
+    } else if (numLength == 6 && e.which != 8 && e.which != 0) {
+        var numberWithoutCode = numValue.substring(3, numLength)
+        $(this).val('+1 (' + numberWithoutCode + ')' + " ");
+    } else if (numLength == 12 && e.which != 8 && e.which != 0) {
         $(this).val(numValue + "-");
     }
 });
