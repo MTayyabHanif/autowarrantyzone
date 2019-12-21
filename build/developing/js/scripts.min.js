@@ -197,12 +197,9 @@ $('#quoteForm select').on('change', function (e) {
 $(".quote-form--phone").keydown(function (e) {
     var numLength = $(this).val().length;
     var numValue = $(this).val();
-    if (numLength == 0 && e.which != 8 && e.which != 0) {
-        $(this).val('+1 ' + numValue);
-    } else if (numLength == 6 && e.which != 8 && e.which != 0) {
-        var numberWithoutCode = numValue.substring(3, numLength)
-        $(this).val('+1 (' + numberWithoutCode + ')' + " ");
-    } else if (numLength == 12 && e.which != 8 && e.which != 0) {
+    if (numLength == 3 && e.which != 8 && e.which != 0) {
+        $(this).val('(' + numValue + ')' + " ");
+    } else if (numLength == 9 && e.which != 8 && e.which != 0) {
         $(this).val(numValue + "-");
     }
 });
