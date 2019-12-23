@@ -9,7 +9,7 @@ function sendFormMessage() {
     $('.quote-form--phone-formatted').val(phoneMaskVal);
     var valid = true;
     $("select,.form-item--input").each(function () {
-        valid = validateInput(this);
+        valid = validateInput(this, true);
     });
     $('.form-errors').empty();
     $('.form-errors').hide();
@@ -51,7 +51,7 @@ function sendFormMessage() {
     }
 }
 
-function validateInput(elem) {
+function validateInput(elem, isForm=false) {
     var elem = $(elem);
     if (elem.length < 0) {
         return;
@@ -65,7 +65,7 @@ function validateInput(elem) {
     elemParent.removeClass('input-error');
     elemParent.find('.desc').hide();
 
-    if (!elem.val().trim() || (isEmail && !emailValidate)) {
+    if ( (!elem.val().trim() && isForm) || (isEmail && !emailValidate)) {
         if (isEmail && !emailValidate) {
             elemParent.find('.desc').text('Email is not valid!');
         } else if(isEmail && emailValidate) {
@@ -76,7 +76,6 @@ function validateInput(elem) {
         elemParent.addClass('input-error');
         valid = false;
     }
-
     return valid;
 }
 
@@ -178,7 +177,7 @@ $('body').on('change', '.form-item-make .quote-form--make', function () {
 
 $('#quoteForm .form-item--input').on('keyup', function (e) {
     validateInput(this);
-    var maxLength = parseInt($(this).attr('maxlength'));
+    var maxLength = parseInt($(this).attr('data-length'));
     var curentValLength = $(this).val().length;
     curentValLength = curentValLength + 1;
 
@@ -204,27 +203,29 @@ $(".quote-form--phone").keydown(function (e) {
     }
 });
 
-$(function () {
+(function($) {
+    $.fn.inputFilter = function(inputFilter) {
+      return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+        if (inputFilter(this.value)) {
+          this.oldValue = this.value;
+          this.oldSelectionStart = this.selectionStart;
+          this.oldSelectionEnd = this.selectionEnd;
+        } else if (this.hasOwnProperty("oldValue")) {
+          this.value = this.oldValue;
+          this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+        } else {
+          this.value = "";
+        }
+      });
+    };
+  }(jQuery));
 
-    $('.numeric').not('.quote-form--phone').on('keypress', function (e) {
-        if (isNaN(this.value + "" + String.fromCharCode(e.charCode))) return false;
-    })
-    .on("cut copy paste", function (e) {
-        e.preventDefault();
-    });
-
+  
+$('.numeric').inputFilter(function(value) {
+    return /^-?\d*$/.test(value); 
 });
 
-$('.quote-form--phone').keydown(function (e) {
-    var key = e.charCode || e.keyCode || 0;
-    return (
-        key == 8 ||
-        key == 9 ||
-        key == 13 ||
-        key == 46 ||
-        key == 110 ||
-        (key >= 35 && key <= 40) ||
-        (key >= 48 && key <= 57) ||
-        (key >= 96 && key <= 105)
-    );
+document.getElementsByClassName('quote-form--phone')[0].addEventListener('input', function (e) {
+    var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+    e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
 });
