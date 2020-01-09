@@ -94,33 +94,51 @@
         }
         @media screen and (max-width: 800px){
             width: 800px;
-            right: -59%;
+            right: -49%;
             top: -60%;
         }
         @media screen and (max-width: 760px){
-            right: -350px;
+            right: -250px;
             top: -470px;
             width: 600px;
+        }
+        @media screen and (max-width: 730px){
+            right: -265px;
+        }
+        @media screen and (max-width: 700px){
+            right: -285px;
+        }
+        @media screen and (max-width: 660px){
+            right: -300px;
+        }
+        @media screen and (max-width: 630px){
+            right: -320px;
         }
         @media screen and (max-width: 570px){
             right: -320px;
         }
         @media screen and (max-width: 520px){
-            right: -247px;
+            right: -272px;
         }
         @media screen and (max-width: 459px){
-            right: -223px;
-        }
-        @media screen and (max-width: 459px){
-            right: -260px;
+            right: -266px;
             top: -418px;
         }
+        @media screen and (max-width: 430px){
+            right: -220px;
+        }
+        @media screen and (max-width: 417px){
+            right: -230px;
+        }
         @media screen and (max-width: 400px){
-            right: -225px;
+            right: -200px;
             top: -330px;
         }
-        @media screen and (max-width: 387px){
-            right: -186px;
+        @media screen and (max-width: 386px){
+            right: -165px;
+        }
+        @media screen and (max-width: 336px){
+            right: -138px;
         }
     }
     .work_section--hassle-free-img img {
@@ -151,8 +169,10 @@
             bottom: -494px;
         }
         @media screen and (max-width: 489px){
-            bottom: -531px;
             right: 49px;
+        }
+        @media screen and (max-width: 450px){
+            right: 30px;
         }
         @media screen and (max-width: 424px){
             bottom: -569px;
@@ -187,7 +207,7 @@
             p {
                 margin-top: 0;
                 font-size: 16px;
-                line-height: 24px;
+                @include lineheight(16px, 24px);
             }
         }
     }

@@ -4,9 +4,9 @@
         margin: 0 auto;
     }
     .page-section--title,h1 {
-        font-size: 24px;
+        @include fontsize(24px);
+        @include lineheight(24px, 27px);
         font-weight: bold;
-        line-height: 27px;
         color: #2d5792;
         margin: 0;
         padding-top: 56px;
@@ -18,9 +18,9 @@
         margin-top: 56px;
         p,ul li {
             margin-bottom: 23px;
-            font-size: 21px;
+            @include fontsize(21px);
+            @include lineheight(21px, 27px);
             font-weight: normal;
-            line-height: 27px;
             color: #4f4f57;
         }
         p:last-child{

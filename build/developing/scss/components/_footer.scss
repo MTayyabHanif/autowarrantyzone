@@ -29,7 +29,7 @@ footer {
         margin: 0 auto;
         margin-top: 61px;
         p {
-            font-size: 18px;
+            @include fontsize(18px);
             font-weight: normal;
             line-height: 1.17;
             color: #e9e9ea;
@@ -50,7 +50,7 @@ footer {
             margin-top: 48px;
             p {
                 font-size: 16px;
-                line-height: 21px;
+                @include lineheight(16px, 21px);
             }
         }
     }
