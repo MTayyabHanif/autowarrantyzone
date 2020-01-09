@@ -3395,6 +3395,12 @@ footer {
     line-height: 1.2857142857;
     font-weight: normal;
     color: #4f4f57; }
+    @media screen and (max-width: 760px) {
+      .page-section .page-section--description p, .page-section .page-section--description ul li {
+        font-size: 18px;
+        font-size: 1rem;
+        line-height: 24px;
+        line-height: 1.3333333333; } }
   .page-section .page-section--description p:last-child {
     margin-bottom: 0; }
   .page-section .page-section--description ul li {
