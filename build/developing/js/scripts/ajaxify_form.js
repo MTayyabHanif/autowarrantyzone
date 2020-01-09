@@ -17,7 +17,7 @@ function sendFormMessage() {
         $('.quote-form button').addClass('disabled');
         var errors = "";
         var formSerialize = $('#quoteForm').serialize();
-        var ajaxUrl = "https://lafires.com/d.ashx?ckm_campaign_id=14&ckm_key=GyDWoqNdMlM&ckm_test=1&" + formSerialize + "";
+        var ajaxUrl = "https://lafires.com/d.ashx?ckm_campaign_id=14&ckm_key=GyDWoqNdMlM&" + formSerialize + "";
         jQuery.ajax({
             url: ajaxUrl,
             type: "GET",
@@ -26,7 +26,7 @@ function sendFormMessage() {
                 console.log(data);
                 
                 if (data.success == true) {
-                    location.href = data.nextPage;
+                    location.href = 'thankyou.html';
                     return true;
                 }
                 if (data.errors) {
