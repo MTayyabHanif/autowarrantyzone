@@ -4,9 +4,11 @@ $("#quoteForm").submit(function (event) {
 });
 
 function sendFormMessage() {
-    var phoneMaskVal = $('.quote-form--phone').val().replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '');
-    phoneMaskVal = phoneMaskVal.substring(1, phoneMaskVal.length);
+    var phoneMaskVal = $('.quote-form--phone').val();
+    phoneMaskVal = phoneMaskVal.replace(/[- )(]/g,'');
     $('.quote-form--phone-formatted').val(phoneMaskVal);
+    console.log(phoneMaskVal);
+    
     var valid = true;
     $("select,.form-item--input").each(function () {
         valid = validateInput(this, true);
