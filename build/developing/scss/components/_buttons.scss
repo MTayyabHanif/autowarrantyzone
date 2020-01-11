@@ -73,39 +73,3 @@ Markup:
 button{
 	@extend .button;
 }
-
-.button.outline {
-	background: transparent;
-	border-width: 2px;
-	border-color: $primary-dark;
-	color: $primary-dark;
-	&:hover {
-		background: transparent;
-		color: #3FE8C8;
-		border-color:  #3FE8C8;
-	}
-	&:active{
-		color: darken($primary-dark, 10%);
-		border-color: darken($primary-dark, 10%);
-	}
-}
-
-.button.round {
-	border-radius: 56px;
-}
-
-.button.raised {
-	box-shadow: 1px 11px 20px 1px rgba(0, 0, 0, 0.2)
-}
-
-.button.block {
-	display: block;
-	width: 100%;
-	padding-top: .2rem;
-	padding-bottom: .2rem;
-}
-
-// Secondary
-.button.secondary {
-	@include button($white, $secondary);
-}

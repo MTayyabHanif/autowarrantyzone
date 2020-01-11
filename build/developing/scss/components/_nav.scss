@@ -6,11 +6,10 @@
         padding: 17px 22px;
     }
     .navbar--logo img{
-        max-width: 280px;
-        width: 100%;
+        width: 280px;
         object-fit: contain;
         @media screen and (max-width: 800px){
-            max-width: 258px;
+            width: 258px;
             height: 64px;
         }
     }
