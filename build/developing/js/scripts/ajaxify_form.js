@@ -11,8 +11,12 @@ function sendFormMessage() {
     
     var valid = true;
     $("select,.form-item--input").each(function () {
-        valid = validateInput(this, true);
+        var checkValid = validateInput(this, true);
+        if(checkValid == false){
+            valid = false;
+        }
     });
+    
     $('.form-errors').empty();
     $('.form-errors').hide();
     if (valid === true) {
