@@ -29,7 +29,6 @@ function sendFormMessage() {
             type: "GET",
             dataType: 'jsonp',
             success: function (data) {
-                console.log(data);
                 
                 if (data.success == true) {
                     location.href = 'thankyou.html';
@@ -115,7 +114,7 @@ $.getJSON(apiUrl + "?callback=?", { cmd: "getYears", sold_in_us: 1 }, function (
     var options = "";
     options += "<option value=''>Select Year</option>";
     for ($i = maxYear; $i >= minYear; $i--) {
-        options += "<option value=" + $i + ">" + $i + "</option>";
+        options += "<option value='" + $i + "'>" + $i + "</option>";
     }
 
     selectYear.html(options);
@@ -138,7 +137,7 @@ $('body').on('change', '.form-item-year .quote-form--year', function () {
         var options = "";
         options += "<option value=''>Select Make</option>";
         for (var i = 0; i < makes.length; i++) {
-            options += "<option value=" + makes[i].make_id + ">" + makes[i].make_display + "</option>";
+            options += "<option value='" + makes[i].make_id + "'>" + makes[i].make_display + "</option>";
         }
 
         selectMake.html(options);
@@ -168,7 +167,7 @@ $('body').on('change', '.form-item-make .quote-form--make', function () {
         var options = "";
         options += "<option value=''>Select Model</option>";
         for (var i = 0; i < models.length; i++) {
-            options += "<option value=" + models[i].model_make_id + ">" + models[i].model_name + "</option>";
+            options += "<option value='" + models[i].model_name + "'>" + models[i].model_name + "</option>";
         }
 
         selectModel.html(options);
